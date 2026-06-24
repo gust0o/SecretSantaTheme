@@ -189,8 +189,14 @@
     line-height:1.35;
     color:#eafff0;
     word-spacing:.1em;
-    animation:bagliore 4.2s ease-in-out infinite;
-    will-change:filter;
+    /* la frase intera risale dal fondo del fumo (in basso) fino al centro */
+    animation:emergi 2s cubic-bezier(.16,.7,.2,1) both, bagliore 4.2s ease-in-out infinite;
+    will-change:transform,filter;
+  }
+  @keyframes emergi{
+    0%{ transform:translateY(48vh); filter:blur(6px); }
+    70%{ filter:blur(0); }
+    100%{ transform:translateY(0); filter:blur(0); }
   }
   /* ogni parola resta intera: l'a-capo avviene solo tra le parole */
   .parola{ display:inline-block; white-space:nowrap; }
@@ -198,8 +204,8 @@
   .lettera{
     display:inline-block;
     opacity:0;
-    filter:blur(26px);
-    transform:translateY(82px) scale(1.55);
+    filter:blur(24px);
+    transform:translateY(22px) scale(1.35);
   }
   .lettera.in{ animation:letteraIn 1.1s cubic-bezier(.2,.7,.2,1) forwards; }
   .lettera.out{ animation:letteraOut .7s ease forwards; }
@@ -216,7 +222,7 @@
   }
 
   @keyframes letteraIn{
-    0%{ opacity:0; filter:blur(26px); transform:translateY(82px) scale(1.55); }
+    0%{ opacity:0; filter:blur(24px); transform:translateY(22px) scale(1.35); }
     55%{ opacity:1; }
     100%{ opacity:1; filter:blur(0); transform:translateY(0) scale(1); }
   }
