@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>&nbsp;</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Cormorant+Garamond:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --verde: 150, 255, 175;
+    --verde-cupo: 60, 200, 120;
+  }
+  *{ margin:0; padding:0; box-sizing:border-box; }
+  html,body{ height:100%; overflow:hidden; }
+  body{
+    background:
+      radial-gradient(120% 120% at 50% 30%, #08160e 0%, #04100a 40%, #010604 100%);
+    color:#dffbe6;
+    font-family:'Cinzel', serif;
+    -webkit-tap-highlight-color:transparent;
+    user-select:none; -webkit-user-select:none;
+    touch-action:manipulation;
+    cursor:pointer;
+  }
+
+  /* ---- scena ---- */
+  .scena{
+    position:fixed; inset:0;
+    display:flex; flex-direction:column;
+    align-items:center; justify-content:center;
+    overflow:hidden;
+  }
+
+  /* vignettatura + grana mistica */
+  .scena::after{
+    content:""; position:absolute; inset:0; pointer-events:none;
+    background:radial-gradient(120% 120% at 50% 50%, transparent 55%, rgba(0,0,0,.85) 100%);
+    z-index:5;
+  }
+
+  /* ---- nebbia/fumo particellare (CSS) ---- */
+  #fumo{ position:absolute; inset:0; z-index:1; pointer-events:none; }
+  .smoke{
+    position:absolute; bottom:-20vh;
+    width:42vmin; height:42vmin;
+    border-radius:50%;
+    background:radial-gradient(circle at 50% 50%,
+        rgba(var(--verde-cupo), .22) 0%,
+        rgba(40,120,80,.12) 35%,
+        rgba(20,60,40,0) 70%);
+    filter:blur(14px);
+    mix-blend-mode:screen;
+    opacity:0;
+    animation:rise linear infinite;
+    will-change:transform,opacity;
+  }
+  @keyframes rise{
+    0%   { transform:translate(0,0) scale(.5) rotate(0deg);   opacity:0; }
+    15%  { opacity:.55; }
+    60%  { opacity:.35; }
+    100% { transform:translate(var(--drift,0), -125vh) scale(1.9) rotate(var(--spin,40deg)); opacity:0; }
+  }
+
+  /* scintille/braci */
+  .ember{
+    position:absolute; bottom:-5vh;
+    width:3px; height:3px; border-radius:50%;
+    background:rgba(var(--verde), .9);
+    box-shadow:0 0 8px 2px rgba(var(--verde-cupo), .8);
+    opacity:0; animation:emberRise linear infinite;
+    will-change:transform,opacity;
+  }
+  @keyframes emberRise{
+    0%{ transform:translateY(0) translateX(0); opacity:0; }
+    10%{ opacity:1; }
+    90%{ opacity:.7; }
+    100%{ transform:translateY(-105vh) translateX(var(--drift,0)); opacity:0; }
+  }
+
+  /* ---- testo iniziale ---- */
+  #intro{
+    position:relative; z-index:6; text-align:center;
+    transition:opacity 1.1s ease, transform 1.1s ease;
+  }
+  #intro .titolo{
+    font-size:clamp(1.3rem, 6vw, 2.6rem);
+    letter-spacing:.35em; text-transform:lowercase;
+    color:rgba(var(--verde), .85);
+    text-shadow:0 0 18px rgba(var(--verde-cupo), .6);
+    animation:pulse 3.4s ease-in-out infinite;
+    margin-bottom:14vh;
+  }
+  @keyframes pulse{
+    0%,100%{ opacity:.55; }
+    50%{ opacity:1; }
+  }
+
+  /* ---- il tasto misterioso (nessuna indicazione) ---- */
+  #gemma{
+    position:relative; z-index:7;
+    width:clamp(70px, 20vw, 110px);
+    height:clamp(70px, 20vw, 110px);
+    border-radius:50%;
+    border:none; cursor:pointer;
+    background:
+      radial-gradient(circle at 38% 32%,
+        rgba(220,255,230,.95) 0%,
+        rgba(var(--verde), .8) 22%,
+        rgba(var(--verde-cupo), .55) 45%,
+        rgba(14,60,36,.9) 80%);
+    box-shadow:
+      0 0 28px 6px rgba(var(--verde-cupo), .55),
+      0 0 70px 18px rgba(var(--verde-cupo), .3),
+      inset 0 0 24px rgba(0,0,0,.45);
+    animation:breathe 3.6s ease-in-out infinite;
+    transition:transform .25s ease;
+    -webkit-appearance:none;
+  }
+  #gemma::before{
+    content:""; position:absolute; inset:-14px; border-radius:50%;
+    border:1px solid rgba(var(--verde-cupo), .35);
+    animation:halo 3.6s ease-in-out infinite;
+  }
+  #gemma:active{ transform:scale(.92); }
+  @keyframes breathe{
+    0%,100%{ box-shadow:0 0 24px 5px rgba(var(--verde-cupo), .45), 0 0 60px 14px rgba(var(--verde-cupo), .22), inset 0 0 24px rgba(0,0,0,.45); }
+    50%{ box-shadow:0 0 40px 10px rgba(var(--verde-cupo), .75), 0 0 110px 30px rgba(var(--verde-cupo), .4), inset 0 0 24px rgba(0,0,0,.4); }
+  }
+  @keyframes halo{
+    0%,100%{ transform:scale(1); opacity:.5; }
+    50%{ transform:scale(1.18); opacity:0; }
+  }
+
+  /* posizione del tasto dopo la prima estrazione: in basso, discreto */
+  body.attivo #gemma{
+    position:fixed; left:50%; bottom:7vh; transform:translateX(-50%);
+    width:clamp(58px, 15vw, 84px); height:clamp(58px, 15vw, 84px);
+    opacity:.85;
+  }
+  body.attivo #gemma:active{ transform:translateX(-50%) scale(.9); }
+
+  /* ---- la parola che emerge dal fumo ---- */
+  #parola{
+    position:fixed; left:50%; top:46%;
+    transform:translate(-50%,-50%);
+    z-index:6; text-align:center; width:92vw; max-width:1000px;
+    pointer-events:none;
+  }
+  #parola .frase{
+    display:inline-block;
+    font-family:'Cinzel', serif;
+    font-weight:700;
+    font-size:clamp(1.6rem, 7vw, 4.4rem);
+    line-height:1.25;
+    color:#eafff0;
+    will-change:transform,filter;
+  }
+  #parola.fluttua .frase{ animation:fluttua 6s ease-in-out infinite, bagliore 4s ease-in-out infinite; }
+
+  .lettera{
+    display:inline-block;
+    opacity:0;
+    filter:blur(22px);
+    transform:translateY(26px) scale(1.5);
+    white-space:pre;
+  }
+  .lettera.in{ animation:letteraIn 1.1s cubic-bezier(.2,.7,.2,1) forwards; }
+  .lettera.out{ animation:letteraOut .7s ease forwards; }
+
+  @keyframes letteraIn{
+    0%{ opacity:0; filter:blur(22px); transform:translateY(26px) scale(1.5); }
+    60%{ opacity:1; }
+    100%{ opacity:1; filter:blur(0); transform:translateY(0) scale(1); }
+  }
+  @keyframes letteraOut{
+    0%{ opacity:1; filter:blur(0); transform:translateY(0) scale(1); }
+    100%{ opacity:0; filter:blur(26px); transform:translateY(-48px) scale(1.25); }
+  }
+  @keyframes fluttua{
+    0%,100%{ transform:translateY(0) rotate(-.4deg); }
+    50%{ transform:translateY(-16px) rotate(.4deg); }
+  }
+  @keyframes bagliore{
+    0%,100%{ text-shadow:0 0 14px rgba(var(--verde), .55), 0 0 36px rgba(var(--verde-cupo), .4); }
+    50%{ text-shadow:0 0 26px rgba(var(--verde), .9), 0 0 70px rgba(var(--verde-cupo), .65); }
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    .smoke,.ember,#gemma,#gemma::before{ animation-duration:.001s; }
+  }
+</style>
+</head>
+<body>
+  <div class="scena">
+    <div id="fumo"></div>
+    <div id="intro">
+      <div class="titolo">premi il tasto</div>
+    </div>
+    <button id="gemma" aria-label="estrai"></button>
+    <div id="parola" aria-live="polite"></div>
+  </div>
+
+<script>
+(function(){
+  "use strict";
+
+  /* ---------- nebbia particellare ---------- */
+  const fumo = document.getElementById('fumo');
+  function rnd(a,b){ return a + Math.random()*(b-a); }
+
+  function creaFumo(n){
+    for(let i=0;i<n;i++){
+      const s = document.createElement('div');
+      s.className = 'smoke';
+      s.style.left = rnd(-10,90) + 'vw';
+      const dur = rnd(13,26);
+      s.style.animationDuration = dur + 's';
+      s.style.animationDelay = (-rnd(0,dur)) + 's';
+      const scala = rnd(.5,1.4);
+      s.style.width = (42*scala) + 'vmin';
+      s.style.height = (42*scala) + 'vmin';
+      s.style.setProperty('--drift', rnd(-12,12) + 'vw');
+      s.style.setProperty('--spin', rnd(-60,60) + 'deg');
+      fumo.appendChild(s);
+    }
+  }
+  function creaBraci(n){
+    for(let i=0;i<n;i++){
+      const e = document.createElement('div');
+      e.className = 'ember';
+      e.style.left = rnd(0,100) + 'vw';
+      const dur = rnd(7,16);
+      e.style.animationDuration = dur + 's';
+      e.style.animationDelay = (-rnd(0,dur)) + 's';
+      e.style.setProperty('--drift', rnd(-10,10) + 'vw');
+      fumo.appendChild(e);
+    }
+  }
+  // meno particelle su mobile per fluidità
+  const piccolo = Math.min(window.innerWidth, window.innerHeight) < 640;
+  creaFumo(piccolo ? 22 : 40);
+  creaBraci(piccolo ? 14 : 26);
+
+  /* sbuffo di fumo attorno alla parola quando appare */
+  function sbuffo(){
+    const n = piccolo ? 8 : 14;
+    for(let i=0;i<n;i++){
+      const s = document.createElement('div');
+      s.className = 'smoke';
+      s.style.left = rnd(25,65) + 'vw';
+      s.style.bottom = rnd(20,55) + 'vh';
+      const dur = rnd(3.5,6);
+      s.style.animationDuration = dur + 's';
+      s.style.animationIterationCount = '1';
+      s.style.width = rnd(20,45) + 'vmin';
+      s.style.height = rnd(20,45) + 'vmin';
+      s.style.setProperty('--drift', rnd(-15,15) + 'vw');
+      fumo.appendChild(s);
+      setTimeout(()=> s.remove(), dur*1000);
+    }
+  }
+
+  /* ---------- dati: i temi ---------- */
+  let TEMI = [];
+  fetch('temi.json')
+    .then(r => r.json())
+    .then(d => { TEMI = d.map(t => t.tema || t); })
+    .catch(()=>{ TEMI = ["Il segreto è ancora nel fumo…"]; });
+
+  /* ---------- estrazione e animazione ---------- */
+  const intro  = document.getElementById('intro');
+  const parola = document.getElementById('parola');
+  const gemma  = document.getElementById('gemma');
+  let occupato = false;
+  let ultimo = -1;
+
+  function scegli(){
+    if(!TEMI.length) return null;
+    if(TEMI.length === 1) return TEMI[0];
+    let i;
+    do { i = Math.floor(Math.random()*TEMI.length); } while(i === ultimo);
+    ultimo = i;
+    return TEMI[i];
+  }
+
+  function mostra(testo){
+    parola.classList.remove('fluttua');
+    parola.innerHTML = '';
+    const frase = document.createElement('span');
+    frase.className = 'frase';
+    const chars = Array.from(testo);
+    chars.forEach((c, idx) => {
+      const sp = document.createElement('span');
+      sp.className = 'lettera';
+      sp.textContent = c;
+      sp.style.animationDelay = (idx * 55) + 'ms';
+      frase.appendChild(sp);
+    });
+    parola.appendChild(frase);
+    // forza reflow poi avvia
+    void frase.offsetWidth;
+    const lettere = frase.querySelectorAll('.lettera');
+    lettere.forEach(l => l.classList.add('in'));
+    const totale = chars.length * 55 + 1100;
+    setTimeout(()=>{
+      parola.classList.add('fluttua');
+      occupato = false;
+    }, totale);
+  }
+
+  function dissolvi(cb){
+    const lettere = parola.querySelectorAll('.lettera');
+    if(!lettere.length){ cb(); return; }
+    parola.classList.remove('fluttua');
+    lettere.forEach((l, idx) => {
+      l.classList.remove('in');
+      l.style.animationDelay = (idx * 25) + 'ms';
+      l.classList.add('out');
+    });
+    setTimeout(cb, lettere.length*25 + 700);
+  }
+
+  function estrai(){
+    if(occupato) return;
+    const testo = scegli();
+    if(!testo) return;            // dati non ancora pronti
+    occupato = true;
+
+    if(!document.body.classList.contains('attivo')){
+      document.body.classList.add('attivo');
+      intro.style.opacity = '0';
+      intro.style.transform = 'translateY(-30px)';
+    }
+
+    sbuffo();
+    const giaPresente = parola.querySelector('.lettera');
+    if(giaPresente){
+      dissolvi(()=>{ sbuffo(); setTimeout(()=> mostra(testo), 120); });
+    }else{
+      setTimeout(()=> mostra(testo), 350);
+    }
+  }
+
+  gemma.addEventListener('click', estrai);
+})();
+</script>
+</body>
+</html>
