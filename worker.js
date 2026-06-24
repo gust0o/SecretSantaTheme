@@ -12,9 +12,9 @@
 // /vota apre una procedura a bottoni: numero opzioni -> anonimo? -> scelta multipla?
 
 // ?v=N va aumentato quando temi.json cambia, per bypassare la cache edge
-const TEMI_URL = "https://gust0o.github.io/SecretSantaTheme/temi.json?v=3";
+const TEMI_URL = "https://gust0o.github.io/SecretSantaTheme/temi.json?v=4";
 let TEMI = null; // cache in memoria dell'isolate (riusata tra le richieste)
-let COMMENTI = {}; // tema -> commento "in personaggio" dell'Oracolo
+let COMMENTI = {}; // tema -> [commento A, commento B] dell'Oracolo
 
 async function caricaTemi() {
   if (TEMI) return TEMI;
@@ -22,12 +22,18 @@ async function caricaTemi() {
   const dati = await r.json();
   TEMI = dati.map((t) => (t && t.tema ? t.tema : t));
   COMMENTI = {};
-  for (const t of dati) if (t && t.tema) COMMENTI[t.tema] = t.commento || "";
+  for (const t of dati) {
+    if (t && t.tema) COMMENTI[t.tema] = [t.commento, t.commento_b].filter(Boolean);
+  }
   return TEMI;
 }
 
-// il commento dell'Oracolo per un tema (stringa vuota se assente)
-const commentoDi = (tema) => COMMENTI[tema] || "";
+// un commento dell'Oracolo per un tema, scelto a caso tra A e B
+const commentoDi = (tema) => {
+  const c = COMMENTI[tema];
+  if (!c || !c.length) return "";
+  return c[Math.floor(Math.random() * c.length)];
+};
 
 const esc = (s) =>
   String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
@@ -279,7 +285,7 @@ async function gestisci(update, env) {
 export default {
   async fetch(request, env, ctx) {
     if (request.method === "GET") {
-      return new Response("🔮 Oracolo del fumo — bot attivo (v8).", { status: 200 });
+      return new Response("🔮 Oracolo del fumo — bot attivo (v9).", { status: 200 });
     }
     if (request.method !== "POST") return new Response("Method not allowed", { status: 405 });
 
