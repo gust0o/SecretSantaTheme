@@ -12,7 +12,7 @@
 // /vota apre una procedura a bottoni: numero opzioni -> anonimo? -> scelta multipla?
 
 // ?v=N va aumentato quando temi.json cambia, per bypassare la cache edge
-const TEMI_URL = "https://gust0o.github.io/SecretSantaTheme/temi.json?v=2";
+const TEMI_URL = "https://gust0o.github.io/SecretSantaTheme/temi.json?v=3";
 let TEMI = null; // cache in memoria dell'isolate (riusata tra le richieste)
 let COMMENTI = {}; // tema -> commento "in personaggio" dell'Oracolo
 
@@ -157,7 +157,7 @@ async function passoVota(token, chatId, messageId, n, anon, multi, temi) {
     await tg(token, "sendMessage", {
       chat_id: chatId,
       parse_mode: "HTML",
-      text: "🔮 <i>L'Oracolo posa lo sguardo su</i> «" + esc(scelto) + "»…\n\n<i>" + esc(c) + "</i>",
+      text: "🔮 <i>" + esc(c) + "</i>",
     });
   }
 }
@@ -279,7 +279,7 @@ async function gestisci(update, env) {
 export default {
   async fetch(request, env, ctx) {
     if (request.method === "GET") {
-      return new Response("🔮 Oracolo del fumo — bot attivo (v7).", { status: 200 });
+      return new Response("🔮 Oracolo del fumo — bot attivo (v8).", { status: 200 });
     }
     if (request.method !== "POST") return new Response("Method not allowed", { status: 405 });
 
