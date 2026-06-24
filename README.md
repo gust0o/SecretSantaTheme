@@ -50,9 +50,8 @@ Per pubblicarlo con **GitHub Pages**: Settings → Pages → _Deploy from a bran
 Python 3, nessuna dipendenza). Comandi:
 
 - `/tema` — evoca **un** tema a caso (con un po' di suspense)
-- `/vota [N]` — genera N temi (2–10, default 5) e apre un **sondaggio nativo**
-  di Telegram per farli votare al gruppo
-- `/regali [N]` — estrae N temi (default 8), uno per regalo
+- `/vota [N]` — genera N temi e apre un **sondaggio nativo** di Telegram per
+  farli votare al gruppo (chiede numero di opzioni, anonimo, scelta multipla)
 - `/help` — istruzioni
 
 **Setup:**

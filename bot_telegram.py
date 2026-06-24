@@ -6,7 +6,6 @@ Stesso database del sito (temi.json). Comandi:
     /tema            -> evoca UN tema a caso (con piccola suspense)
     /vota [N]        -> genera N temi (2-10, default 5) e apre un SONDAGGIO
                         nativo di Telegram per farli votare al gruppo
-    /regali [N]      -> estrae N temi (default 8), uno per regalo
     /help            -> istruzioni
 
 NESSUN dato personale nel codice: il token si legge dalla variabile
@@ -103,24 +102,11 @@ def cmd_vota(chat_id, args, temi):
            allows_multiple_answers=False)
 
 
-def cmd_regali(chat_id, args, temi):
-    n = 8
-    if args and args[0].isdigit():
-        n = int(args[0])
-    n = max(1, min(len(temi), n))
-    scelti = random.sample(temi, n)
-    righe = ["🎁 <b>Temi estratti ({} regali)</b>\n".format(n)]
-    for i, t in enumerate(scelti, 1):
-        righe.append("<b>Regalo {}:</b> {}".format(i, esc(t)))
-    manda(chat_id, "\n".join(righe))
-
-
 def cmd_help(chat_id, _args, _temi):
     manda(chat_id,
           "🔮 <b>Oracolo del fumo — Secret Santa</b>\n\n"
           "/tema — evoca un tema a caso\n"
           "/vota [N] — N temi (2-10) e apre un sondaggio per votare\n"
-          "/regali [N] — estrae N temi (default 8), uno per regalo\n"
           "/help — questo messaggio")
 
 
@@ -130,8 +116,6 @@ COMANDI = {
     "tema": cmd_tema,
     "vota": cmd_vota,
     "sondaggio": cmd_vota,
-    "regali": cmd_regali,
-    "estrai": cmd_regali,
 }
 
 
