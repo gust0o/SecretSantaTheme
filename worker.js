@@ -4,11 +4,12 @@
 // Sempre attivo, gratis, risposte istantanee (webhook). Stesso database del
 // sito: legge temi.json dalla pagina GitHub Pages (unica fonte di verità).
 //
-// Variabili da impostare nel Worker (Settings -> Variables and Secrets):
+// Variabili da impostare nel Worker (Settings -> Variables and Secrets, RUNTIME):
 //   BOT_TOKEN       (secret)  -> token del bot da @BotFather   [obbligatorio]
 //   WEBHOOK_SECRET  (secret)  -> stringa a piacere per blindare il webhook [opzionale]
 //
-// Comandi: /tema  /vota [N]  /regali [N]  /help
+// Comandi: /tema  /vota [N]  /help
+// /vota apre una procedura a bottoni: numero opzioni -> anonimo? -> scelta multipla?
 
 const TEMI_URL = "https://gust0o.github.io/SecretSantaTheme/temi.json";
 let TEMI = null; // cache in memoria dell'isolate (riusata tra le richieste)
@@ -42,8 +43,84 @@ async function tg(token, method, body) {
   return r.json();
 }
 
+// invia un nuovo messaggio oppure modifica quello esistente (durante la procedura)
+function inviaOEdita(token, chatId, messageId, text, inline_keyboard) {
+  const base = { chat_id: chatId, text, parse_mode: "HTML", reply_markup: { inline_keyboard } };
+  if (messageId) return tg(token, "editMessageText", { ...base, message_id: messageId });
+  return tg(token, "sendMessage", base);
+}
+
+// Procedura /vota guidata dai bottoni. Lo stato viaggia nei callback_data:
+//   v:<n>:<anon>:<multi>   dove ogni campo è un numero oppure "?" (non ancora scelto)
+async function passoVota(token, chatId, messageId, n, anon, multi, temi) {
+  // 1) quante opzioni?
+  if (n === null) {
+    const kb = [];
+    let row = [];
+    for (let i = 2; i <= 10; i++) {
+      row.push({ text: String(i), callback_data: `v:${i}:?:?` });
+      if (row.length === 3) { kb.push(row); row = []; }
+    }
+    if (row.length) kb.push(row);
+    return inviaOEdita(token, chatId, messageId,
+      "🗳️ <b>Quante opzioni</b> nel sondaggio? (2–10)", kb);
+  }
+  // 2) anonimo?
+  if (anon === null) {
+    const kb = [[
+      { text: "🙈 Anonimo", callback_data: `v:${n}:1:?` },
+      { text: "👀 Voto palese", callback_data: `v:${n}:0:?` },
+    ]];
+    return inviaOEdita(token, chatId, messageId, "🗳️ <b>Voto anonimo?</b>", kb);
+  }
+  // 3) scelta multipla?
+  if (multi === null) {
+    const a = anon ? 1 : 0;
+    const kb = [[
+      { text: "☑️ Una sola scelta", callback_data: `v:${n}:${a}:0` },
+      { text: "✅ Scelta multipla", callback_data: `v:${n}:${a}:1` },
+    ]];
+    return inviaOEdita(token, chatId, messageId,
+      "🗳️ <b>Si può votare più di un tema?</b>", kb);
+  }
+  // 4) tutto scelto -> crea il sondaggio
+  const opzioni = sample(temi, n);
+  if (messageId) {
+    await tg(token, "editMessageText", {
+      chat_id: chatId, message_id: messageId, parse_mode: "HTML",
+      text: `🗳️ <i>Il fumo propone ${n} temi…</i> ` +
+            `(${anon ? "anonimo" : "palese"}, ${multi ? "scelta multipla" : "scelta singola"})`,
+    });
+  }
+  await tg(token, "sendPoll", {
+    chat_id: chatId,
+    question: "🎁 Quale tema per il Secret Santa?",
+    options: opzioni,
+    is_anonymous: anon,
+    allows_multiple_answers: multi,
+  });
+}
+
 async function gestisci(update, env) {
   const token = env.BOT_TOKEN;
+  const temi = await caricaTemi();
+
+  // --- pressione di un bottone (procedura /vota) ---
+  if (update.callback_query) {
+    const cq = update.callback_query;
+    const data = cq.data || "";
+    await tg(token, "answerCallbackQuery", { callback_query_id: cq.id });
+    if (data.startsWith("v:") && cq.message) {
+      const [, ns, as, ms] = data.split(":");
+      const n = ns === "?" ? null : parseInt(ns, 10);
+      const anon = as === "?" ? null : as === "1";
+      const multi = ms === "?" ? null : ms === "1";
+      await passoVota(token, cq.message.chat.id, cq.message.message_id, n, anon, multi, temi);
+    }
+    return;
+  }
+
+  // --- messaggi/comandi ---
   const msg = update.message || update.channel_post;
   if (!msg || !msg.text) return;
   const text = msg.text.trim();
@@ -53,7 +130,6 @@ async function gestisci(update, env) {
   const parts = text.split(/\s+/);
   const cmd = parts[0].slice(1).split("@")[0].toLowerCase(); // /vota@MioBot -> vota
   const args = parts.slice(1);
-  const temi = await caricaTemi();
 
   if (cmd === "tema") {
     const r = await tg(token, "sendMessage", {
@@ -65,36 +141,20 @@ async function gestisci(update, env) {
     if (r && r.ok && r.result && r.result.message_id) {
       await sleep(1300); // piccola suspense
       await tg(token, "editMessageText", {
-        chat_id: chatId,
-        message_id: r.result.message_id,
-        text: testo,
-        parse_mode: "HTML",
+        chat_id: chatId, message_id: r.result.message_id, text: testo, parse_mode: "HTML",
       });
     } else {
       await tg(token, "sendMessage", { chat_id: chatId, text: testo, parse_mode: "HTML" });
     }
   } else if (cmd === "vota" || cmd === "sondaggio") {
-    let n = args[0] && /^\d+$/.test(args[0]) ? parseInt(args[0], 10) : 5;
-    n = Math.max(2, Math.min(10, n)); // Telegram: 2..10 opzioni
-    const opzioni = sample(temi, n);
-    await tg(token, "sendMessage", {
-      chat_id: chatId,
-      text: `🗳️ <i>Il fumo propone ${n} temi… votate il preferito!</i>`,
-      parse_mode: "HTML",
-    });
-    await tg(token, "sendPoll", {
-      chat_id: chatId,
-      question: "🎁 Quale tema per il Secret Santa?",
-      options: opzioni,
-      is_anonymous: false,
-      allows_multiple_answers: false,
-    });
-  } else if (cmd === "regali" || cmd === "estrai") {
-    let n = args[0] && /^\d+$/.test(args[0]) ? parseInt(args[0], 10) : 8;
-    n = Math.max(1, Math.min(temi.length, n));
-    const righe = [`🎁 <b>Temi estratti (${n} regali)</b>\n`];
-    sample(temi, n).forEach((t, i) => righe.push(`<b>Regalo ${i + 1}:</b> ${esc(t)}`));
-    await tg(token, "sendMessage", { chat_id: chatId, text: righe.join("\n"), parse_mode: "HTML" });
+    if (args[0] && /^\d+$/.test(args[0])) {
+      // numero dato -> salta la domanda sul numero, chiedi anonimo/multipla
+      const n = Math.max(2, Math.min(10, parseInt(args[0], 10)));
+      await passoVota(token, chatId, null, n, null, null, temi);
+    } else {
+      // niente numero -> chiedi quante opzioni
+      await passoVota(token, chatId, null, null, null, null, temi);
+    }
   } else if (cmd === "start" || cmd === "help") {
     await tg(token, "sendMessage", {
       chat_id: chatId,
@@ -102,8 +162,7 @@ async function gestisci(update, env) {
       text:
         "🔮 <b>Oracolo del fumo — Secret Santa</b>\n\n" +
         "/tema — evoca un tema a caso\n" +
-        "/vota [N] — N temi (2-10) e apre un sondaggio per votare\n" +
-        "/regali [N] — estrae N temi (default 8), uno per regalo\n" +
+        "/vota [N] — sondaggio per votare (chiede numero opzioni, anonimo, scelta multipla)\n" +
         "/help — questo messaggio",
     });
   }
@@ -112,10 +171,7 @@ async function gestisci(update, env) {
 export default {
   async fetch(request, env, ctx) {
     if (request.method === "GET") {
-      return new Response(
-        "🔮 Oracolo del fumo — bot attivo. Imposta il webhook di Telegram su questo URL.",
-        { status: 200 }
-      );
+      return new Response("🔮 Oracolo del fumo — bot attivo (v2).", { status: 200 });
     }
     if (request.method !== "POST") return new Response("Method not allowed", { status: 405 });
 
@@ -132,7 +188,7 @@ export default {
     } catch (e) {
       return new Response("bad request", { status: 400 });
     }
-    // rispondo subito 200; il lavoro (inclusa la suspense) continua in background
+    // rispondo subito 200; il lavoro continua in background
     ctx.waitUntil(gestisci(update, env).catch((e) => console.log("errore:", e)));
     return new Response("ok", { status: 200 });
   },
