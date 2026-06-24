@@ -106,22 +106,30 @@ async function gestisci(update, env) {
   const temi = await caricaTemi();
 
   // --- inline mode: @SecretSantaVagbot in qualunque chat ---
+  // NB: Telegram non consente di inviare un SONDAGGIO via inline (solo messaggi).
+  // Quindi l'inline manda un tema a caso (o cerca); per il sondaggio si usa /vota.
   if (update.inline_query) {
     const iq = update.inline_query;
     const q = (iq.query || "").trim().toLowerCase();
-    let scelti;
-    if (q) {
-      scelti = temi.filter((t) => t.toLowerCase().includes(q)).slice(0, 25);
-    } else {
-      scelti = sample(temi, 15); // temi casuali se non scrivi nulla
-    }
-    let results = scelti.map((t, i) => ({
+    const art = (id, t, title, desc) => ({
       type: "article",
-      id: String(i),
-      title: t,
-      description: "🔮 Tocca per inviare questo tema",
+      id,
+      title,
+      description: desc,
       input_message_content: { message_text: "🔮 <b>" + esc(t) + "</b>", parse_mode: "HTML" },
-    }));
+    });
+    let results;
+    if (q) {
+      // ricerca per sottostringa
+      results = temi
+        .filter((t) => t.toLowerCase().includes(q))
+        .slice(0, 25)
+        .map((t, i) => art(String(i), t, t, "🔮 Tocca per inviare questo tema"));
+    } else {
+      // una sola voce: tocchi e mandi un tema a caso
+      const t = pick(temi);
+      results = [art("rnd", t, "🎲 Tema a caso", t)];
+    }
     if (!results.length) {
       results = [{
         type: "article",
@@ -133,7 +141,7 @@ async function gestisci(update, env) {
     await tg(token, "answerInlineQuery", {
       inline_query_id: iq.id,
       results,
-      cache_time: 5,
+      cache_time: 1, // basso: così "tema a caso" cambia ogni volta
       is_personal: true,
     });
     return;
@@ -205,7 +213,7 @@ async function gestisci(update, env) {
 export default {
   async fetch(request, env, ctx) {
     if (request.method === "GET") {
-      return new Response("🔮 Oracolo del fumo — bot attivo (v3).", { status: 200 });
+      return new Response("🔮 Oracolo del fumo — bot attivo (v4).", { status: 200 });
     }
     if (request.method !== "POST") return new Response("Method not allowed", { status: 405 });
 
