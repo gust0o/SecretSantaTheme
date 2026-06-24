@@ -69,6 +69,36 @@ Python 3, nessuna dipendenza). Comandi:
 Il bot usa long-polling: va tenuto in esecuzione su una macchina/server (il PC,
 una VPS, ecc.). Per il voto in gruppo, aggiungi il bot al gruppo e usa `/vota`.
 
+## Bot Telegram sempre attivo (gratis, Cloudflare Workers)
+
+Per non tenere acceso nessun computer, lo stesso bot gira come **Cloudflare
+Worker** (`worker.js`): sempre attivo, risposte istantanee, costo zero. Usa il
+webhook di Telegram e legge i temi dalla `temi.json` pubblicata su Pages.
+
+**Setup dal browser (niente computer acceso):**
+
+1. Crea un account gratuito su [Cloudflare](https://dash.cloudflare.com) →
+   **Workers & Pages** → **Create** → **Create Worker** → dagli un nome → **Deploy**.
+2. **Edit code**: cancella il codice di esempio, incolla tutto il contenuto di
+   `worker.js`, poi **Deploy**.
+3. **Settings → Variables and Secrets** → aggiungi un *secret*:
+   - `BOT_TOKEN` = il token di @BotFather
+   - (opzionale) `WEBHOOK_SECRET` = una stringa a piacere, per blindare il webhook
+4. Copia l'URL del Worker (es. `https://nome.tuo-utente.workers.dev`).
+5. Attiva il webhook aprendo nel browser (sostituisci `<TOKEN>` e `<URL>`):
+
+   ```
+   https://api.telegram.org/bot<TOKEN>/setWebhook?url=<URL>
+   ```
+
+   Se hai impostato `WEBHOOK_SECRET`, aggiungi `&secret_token=<WEBHOOK_SECRET>`.
+
+Fatto: il bot risponde per sempre, senza server da gestire. (Con il webhook
+attivo, **non** usare contemporaneamente `bot_telegram.py`, che usa il polling.)
+
+Per chi preferisce la riga di comando c'è `wrangler.toml`:
+`wrangler deploy` e `wrangler secret put BOT_TOKEN`.
+
 ## Note
 
 Repository volutamente generico: nessun nome, nessuna informazione personale,

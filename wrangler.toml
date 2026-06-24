@@ -1,0 +1,8 @@
+# Config per deploy da CLI (opzionale). Dal browser/dashboard non serve.
+#   npm i -g wrangler
+#   wrangler deploy
+#   wrangler secret put BOT_TOKEN          # incolla il token quando richiesto
+#   wrangler secret put WEBHOOK_SECRET     # opzionale
+name = "secretsanta-oracolo"
+main = "worker.js"
+compatibility_date = "2024-11-01"
