@@ -79,6 +79,21 @@
     100%{ transform:translateY(-105vh) translateX(var(--drift,0)); opacity:0; }
   }
 
+  /* turbini: lenti vortici di nebbia che ruotano sullo sfondo */
+  .turbine{
+    position:absolute; border-radius:50%;
+    mix-blend-mode:screen; filter:blur(36px);
+    background:conic-gradient(from 0deg,
+      transparent 0deg,
+      rgba(var(--verde-cupo), .13) 45deg,
+      transparent 125deg,
+      rgba(var(--verde-cupo), .10) 205deg,
+      transparent 300deg);
+    opacity:.55; animation:swirl linear infinite;
+    will-change:transform; pointer-events:none;
+  }
+  @keyframes swirl{ from{ transform:rotate(0deg); } to{ transform:rotate(360deg); } }
+
   /* ---- testo iniziale ---- */
   #intro{
     position:relative; z-index:6; text-align:center;
@@ -152,22 +167,35 @@
     display:inline-block;
     font-family:'Cinzel', serif;
     font-weight:700;
-    font-size:clamp(1.6rem, 7vw, 4.4rem);
-    line-height:1.25;
+    font-size:clamp(1.4rem, 6.2vw, 3.7rem);
+    line-height:1.35;
     color:#eafff0;
-    will-change:transform,filter;
+    word-spacing:.1em;
+    animation:bagliore 4.2s ease-in-out infinite;
+    will-change:filter;
   }
-  #parola.fluttua .frase{ animation:fluttua 6s ease-in-out infinite, bagliore 4s ease-in-out infinite; }
+  /* ogni parola resta intera: l'a-capo avviene solo tra le parole */
+  .parola{ display:inline-block; white-space:nowrap; }
 
   .lettera{
     display:inline-block;
     opacity:0;
     filter:blur(22px);
     transform:translateY(26px) scale(1.5);
-    white-space:pre;
   }
   .lettera.in{ animation:letteraIn 1.1s cubic-bezier(.2,.7,.2,1) forwards; }
   .lettera.out{ animation:letteraOut .7s ease forwards; }
+  /* fluttuazione continua, lettera per lettera (ampiezza ridotta = resta leggibile) */
+  .glifo{
+    display:inline-block;
+    animation:glifoFloat var(--fdur, 3.6s) ease-in-out infinite;
+    animation-delay:var(--fdelay, 0s);
+    will-change:transform;
+  }
+  @keyframes glifoFloat{
+    0%,100%{ transform:translateY(0) rotate(-.6deg); }
+    50%{ transform:translateY(-7px) rotate(.6deg); }
+  }
 
   @keyframes letteraIn{
     0%{ opacity:0; filter:blur(22px); transform:translateY(26px) scale(1.5); }
@@ -238,14 +266,32 @@
       fumo.appendChild(e);
     }
   }
-  // meno particelle su mobile per fluidità
+  function creaTurbini(n){
+    for(let i=0;i<n;i++){
+      const t = document.createElement('div');
+      t.className = 'turbine';
+      const size = rnd(55, 115);
+      t.style.width = size + 'vmin';
+      t.style.height = size + 'vmin';
+      t.style.left = rnd(-25, 75) + 'vw';
+      t.style.top  = rnd(-25, 70) + 'vh';
+      const dur = rnd(26, 55);
+      t.style.animationDuration = dur + 's';
+      if(i % 2) t.style.animationDirection = 'reverse';
+      t.style.animationDelay = (-rnd(0, dur)) + 's';
+      fumo.appendChild(t);
+    }
+  }
+
+  // più particelle: nebbia fitta, braci e turbini (ridotti su mobile per fluidità)
   const piccolo = Math.min(window.innerWidth, window.innerHeight) < 640;
-  creaFumo(piccolo ? 22 : 40);
-  creaBraci(piccolo ? 14 : 26);
+  creaFumo(piccolo ? 34 : 60);
+  creaBraci(piccolo ? 20 : 40);
+  creaTurbini(piccolo ? 3 : 6);
 
   /* sbuffo di fumo attorno alla parola quando appare */
   function sbuffo(){
-    const n = piccolo ? 8 : 14;
+    const n = piccolo ? 12 : 20;
     for(let i=0;i<n;i++){
       const s = document.createElement('div');
       s.className = 'smoke';
@@ -286,28 +332,38 @@
   }
 
   function mostra(testo){
-    parola.classList.remove('fluttua');
     parola.innerHTML = '';
     const frase = document.createElement('span');
     frase.className = 'frase';
-    const chars = Array.from(testo);
-    chars.forEach((c, idx) => {
-      const sp = document.createElement('span');
-      sp.className = 'lettera';
-      sp.textContent = c;
-      sp.style.animationDelay = (idx * 55) + 'ms';
-      frase.appendChild(sp);
+    const parole = testo.split(' ');
+    let idx = 0;
+    parole.forEach((w, wi) => {
+      // ogni parola in un blocco che non si spezza mai a metà
+      const pw = document.createElement('span');
+      pw.className = 'parola';
+      Array.from(w).forEach(c => {
+        const lo = document.createElement('span');      // gestisce comparsa/dissolvenza
+        lo.className = 'lettera';
+        lo.style.animationDelay = (idx * 55) + 'ms';
+        const gl = document.createElement('span');      // fluttua di continuo, sfasato
+        gl.className = 'glifo';
+        gl.textContent = c;
+        gl.style.setProperty('--fdelay', (-(idx * 0.16)).toFixed(2) + 's');
+        gl.style.setProperty('--fdur', (3.2 + (idx % 5) * 0.22).toFixed(2) + 's');
+        lo.appendChild(gl);
+        pw.appendChild(lo);
+        idx++;
+      });
+      frase.appendChild(pw);
+      // spazio reale e separabile: l'a-capo può avvenire solo qui
+      if(wi < parole.length - 1) frase.appendChild(document.createTextNode(' '));
     });
     parola.appendChild(frase);
-    // forza reflow poi avvia
+    // forza reflow poi avvia la comparsa
     void frase.offsetWidth;
     const lettere = frase.querySelectorAll('.lettera');
     lettere.forEach(l => l.classList.add('in'));
-    const totale = chars.length * 55 + 1100;
-    setTimeout(()=>{
-      parola.classList.add('fluttua');
-      occupato = false;
-    }, totale);
+    setTimeout(()=>{ occupato = false; }, idx * 55 + 1100);
   }
 
   function dissolvi(cb){
