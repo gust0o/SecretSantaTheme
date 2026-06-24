@@ -32,6 +32,18 @@ python3 estrai.py --una-per-categoria # tutti di categorie diverse
 python3 estrai.py --seed 42           # estrazione riproducibile
 ```
 
+## Sito (l'oracolo del fumo)
+
+`index.html` è un mini-sito a pagina singola, stile "quest di Jumanji": uno
+sfondo di nebbia particellare (solo CSS), una scritta iniziale _premi il tasto_
+e un tasto misterioso senza indicazioni. A ogni pressione viene estratto **un
+solo tema** a caso, che emerge dal fumo e fluttua. Funziona da desktop e mobile,
+senza dipendenze.
+
+Per pubblicarlo con **GitHub Pages**: Settings → Pages → _Deploy from a branch_
+→ branch `main`, cartella `/ (root)`. Il sito sarà su
+`https://<utente>.github.io/SecretSantaTheme/` e legge i temi da `temi.json`.
+
 ## Note
 
 Repository volutamente generico: nessun nome, nessuna informazione personale,
