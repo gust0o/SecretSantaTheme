@@ -1,0 +1,6 @@
+# Artefatti Python
+__pycache__/
+*.py[cod]
+
+# Variabili d'ambiente locali (token del bot, ecc.) — mai committare
+.env
