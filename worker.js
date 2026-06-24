@@ -105,6 +105,40 @@ async function gestisci(update, env) {
   const token = env.BOT_TOKEN;
   const temi = await caricaTemi();
 
+  // --- inline mode: @SecretSantaVagbot in qualunque chat ---
+  if (update.inline_query) {
+    const iq = update.inline_query;
+    const q = (iq.query || "").trim().toLowerCase();
+    let scelti;
+    if (q) {
+      scelti = temi.filter((t) => t.toLowerCase().includes(q)).slice(0, 25);
+    } else {
+      scelti = sample(temi, 15); // temi casuali se non scrivi nulla
+    }
+    let results = scelti.map((t, i) => ({
+      type: "article",
+      id: String(i),
+      title: t,
+      description: "🔮 Tocca per inviare questo tema",
+      input_message_content: { message_text: "🔮 <b>" + esc(t) + "</b>", parse_mode: "HTML" },
+    }));
+    if (!results.length) {
+      results = [{
+        type: "article",
+        id: "0",
+        title: "Nessun tema trovato",
+        input_message_content: { message_text: "Nessun tema trovato 🤷" },
+      }];
+    }
+    await tg(token, "answerInlineQuery", {
+      inline_query_id: iq.id,
+      results,
+      cache_time: 5,
+      is_personal: true,
+    });
+    return;
+  }
+
   // --- pressione di un bottone (procedura /vota) ---
   if (update.callback_query) {
     const cq = update.callback_query;
@@ -171,7 +205,7 @@ async function gestisci(update, env) {
 export default {
   async fetch(request, env, ctx) {
     if (request.method === "GET") {
-      return new Response("🔮 Oracolo del fumo — bot attivo (v2).", { status: 200 });
+      return new Response("🔮 Oracolo del fumo — bot attivo (v3).", { status: 200 });
     }
     if (request.method !== "POST") return new Response("Method not allowed", { status: 405 });
 
