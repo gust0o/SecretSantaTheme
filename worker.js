@@ -13,14 +13,20 @@
 
 const TEMI_URL = "https://gust0o.github.io/SecretSantaTheme/temi.json";
 let TEMI = null; // cache in memoria dell'isolate (riusata tra le richieste)
+let COMMENTI = {}; // tema -> commento "in personaggio" dell'Oracolo
 
 async function caricaTemi() {
   if (TEMI) return TEMI;
   const r = await fetch(TEMI_URL, { cf: { cacheTtl: 3600, cacheEverything: true } });
   const dati = await r.json();
   TEMI = dati.map((t) => (t && t.tema ? t.tema : t));
+  COMMENTI = {};
+  for (const t of dati) if (t && t.tema) COMMENTI[t.tema] = t.commento || "";
   return TEMI;
 }
+
+// il commento dell'Oracolo per un tema (stringa vuota se assente)
+const commentoDi = (tema) => COMMENTI[tema] || "";
 
 const esc = (s) =>
   String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
@@ -51,12 +57,19 @@ const BOTTONI = {
   ]],
 };
 
-// invia un tema a caso con piccola suspense
+// testo di un tema con sotto il commento dell'Oracolo (se c'è)
+function temaConCommento(tema) {
+  const c = commentoDi(tema);
+  return "🔮 <b>" + esc(tema) + "</b>" + (c ? "\n\n<i>" + esc(c) + "</i>" : "");
+}
+
+// invia un tema a caso con piccola suspense, poi il commento dell'Oracolo
 async function inviaTema(token, chatId, temi) {
+  const tema = pick(temi);
   const r = await tg(token, "sendMessage", {
     chat_id: chatId, text: "🌫️ <i>Evoco un tema dal fumo…</i>", parse_mode: "HTML",
   });
-  const testo = "🔮 <b>" + esc(pick(temi)) + "</b>";
+  const testo = temaConCommento(tema);
   if (r && r.ok && r.result && r.result.message_id) {
     await sleep(1300);
     await tg(token, "editMessageText", {
@@ -135,6 +148,17 @@ async function passoVota(token, chatId, messageId, n, anon, multi, temi) {
     is_anonymous: anon,
     allows_multiple_answers: multi,
   });
+  // l'Oracolo commenta UNO solo dei temi proposti, a caso
+  const scelto = opzioni[Math.floor(Math.random() * opzioni.length)];
+  const c = commentoDi(scelto);
+  if (c) {
+    await sleep(900);
+    await tg(token, "sendMessage", {
+      chat_id: chatId,
+      parse_mode: "HTML",
+      text: "🔮 <i>L'Oracolo posa lo sguardo su</i> «" + esc(scelto) + "»…\n\n<i>" + esc(c) + "</i>",
+    });
+  }
 }
 
 async function gestisci(update, env) {
@@ -152,7 +176,7 @@ async function gestisci(update, env) {
       id,
       title,
       description: desc,
-      input_message_content: { message_text: "🔮 <b>" + esc(t) + "</b>", parse_mode: "HTML" },
+      input_message_content: { message_text: temaConCommento(t), parse_mode: "HTML" },
     });
     let results;
     if (q) {
@@ -254,7 +278,7 @@ async function gestisci(update, env) {
 export default {
   async fetch(request, env, ctx) {
     if (request.method === "GET") {
-      return new Response("🔮 Oracolo del fumo — bot attivo (v5).", { status: 200 });
+      return new Response("🔮 Oracolo del fumo — bot attivo (v6).", { status: 200 });
     }
     if (request.method !== "POST") return new Response("Method not allowed", { status: 405 });
 
