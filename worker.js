@@ -43,6 +43,42 @@ async function tg(token, method, body) {
   return r.json();
 }
 
+// bottoni rapidi (benvenuto, /start, /help)
+const BOTTONI = {
+  inline_keyboard: [[
+    { text: "🔮 Tema a caso", callback_data: "act:tema" },
+    { text: "🗳️ Genera sondaggio", callback_data: "act:vota" },
+  ]],
+};
+
+// invia un tema a caso con piccola suspense
+async function inviaTema(token, chatId, temi) {
+  const r = await tg(token, "sendMessage", {
+    chat_id: chatId, text: "🌫️ <i>Evoco un tema dal fumo…</i>", parse_mode: "HTML",
+  });
+  const testo = "🔮 <b>" + esc(pick(temi)) + "</b>";
+  if (r && r.ok && r.result && r.result.message_id) {
+    await sleep(1300);
+    await tg(token, "editMessageText", {
+      chat_id: chatId, message_id: r.result.message_id, text: testo, parse_mode: "HTML",
+    });
+  } else {
+    await tg(token, "sendMessage", { chat_id: chatId, text: testo, parse_mode: "HTML" });
+  }
+}
+
+// messaggio di benvenuto quando il bot viene aggiunto a un gruppo
+function inviaBenvenuto(token, chatId) {
+  return tg(token, "sendMessage", {
+    chat_id: chatId,
+    parse_mode: "HTML",
+    text:
+      "🔮 <b>Oracolo del fumo</b> è arrivato!\n\n" +
+      "Toccate un bottone qui sotto, oppure usate <b>/vota</b> per il sondaggio e <b>/tema</b> per un tema a caso.",
+    reply_markup: BOTTONI,
+  });
+}
+
 // invia un nuovo messaggio oppure modifica quello esistente (durante la procedura)
 function inviaOEdita(token, chatId, messageId, text, inline_keyboard) {
   const base = { chat_id: chatId, text, parse_mode: "HTML", reply_markup: { inline_keyboard } };
@@ -147,17 +183,34 @@ async function gestisci(update, env) {
     return;
   }
 
-  // --- pressione di un bottone (procedura /vota) ---
+  // --- bot aggiunto/rimosso da un gruppo: messaggio di benvenuto coi bottoni ---
+  if (update.my_chat_member) {
+    const nuovo = update.my_chat_member.new_chat_member?.status;
+    const vecchio = update.my_chat_member.old_chat_member?.status;
+    if ((nuovo === "member" || nuovo === "administrator") &&
+        (vecchio === "left" || vecchio === "kicked" || !vecchio)) {
+      await inviaBenvenuto(token, update.my_chat_member.chat.id);
+    }
+    return;
+  }
+
+  // --- pressione di un bottone ---
   if (update.callback_query) {
     const cq = update.callback_query;
     const data = cq.data || "";
     await tg(token, "answerCallbackQuery", { callback_query_id: cq.id });
-    if (data.startsWith("v:") && cq.message) {
+    if (!cq.message) return;
+    const chatId = cq.message.chat.id;
+    if (data === "act:tema") {
+      await inviaTema(token, chatId, temi);
+    } else if (data === "act:vota") {
+      await passoVota(token, chatId, null, null, null, null, temi); // avvia: chiede il numero
+    } else if (data.startsWith("v:")) {
       const [, ns, as, ms] = data.split(":");
       const n = ns === "?" ? null : parseInt(ns, 10);
       const anon = as === "?" ? null : as === "1";
       const multi = ms === "?" ? null : ms === "1";
-      await passoVota(token, cq.message.chat.id, cq.message.message_id, n, anon, multi, temi);
+      await passoVota(token, chatId, cq.message.message_id, n, anon, multi, temi);
     }
     return;
   }
@@ -174,20 +227,7 @@ async function gestisci(update, env) {
   const args = parts.slice(1);
 
   if (cmd === "tema") {
-    const r = await tg(token, "sendMessage", {
-      chat_id: chatId,
-      text: "🌫️ <i>Evoco un tema dal fumo…</i>",
-      parse_mode: "HTML",
-    });
-    const testo = "🔮 <b>" + esc(pick(temi)) + "</b>";
-    if (r && r.ok && r.result && r.result.message_id) {
-      await sleep(1300); // piccola suspense
-      await tg(token, "editMessageText", {
-        chat_id: chatId, message_id: r.result.message_id, text: testo, parse_mode: "HTML",
-      });
-    } else {
-      await tg(token, "sendMessage", { chat_id: chatId, text: testo, parse_mode: "HTML" });
-    }
+    await inviaTema(token, chatId, temi);
   } else if (cmd === "vota" || cmd === "sondaggio") {
     if (args[0] && /^\d+$/.test(args[0])) {
       // numero dato -> salta la domanda sul numero, chiedi anonimo/multipla
@@ -206,6 +246,7 @@ async function gestisci(update, env) {
         "/tema — evoca un tema a caso\n" +
         "/vota [N] — sondaggio per votare (chiede numero opzioni, anonimo, scelta multipla)\n" +
         "/help — questo messaggio",
+      reply_markup: BOTTONI,
     });
   }
 }
@@ -213,7 +254,7 @@ async function gestisci(update, env) {
 export default {
   async fetch(request, env, ctx) {
     if (request.method === "GET") {
-      return new Response("🔮 Oracolo del fumo — bot attivo (v4).", { status: 200 });
+      return new Response("🔮 Oracolo del fumo — bot attivo (v5).", { status: 200 });
     }
     if (request.method !== "POST") return new Response("Method not allowed", { status: 405 });
 
