@@ -1,3 +1,4 @@
+// Deploy via Cloudflare Workers Builds (auto da GitHub, branch main).
 // Cloudflare Worker — bot Telegram "oracolo del fumo" per il Secret Santa.
 //
 // Sempre attivo, gratis, risposte istantanee (webhook). Stesso database del
