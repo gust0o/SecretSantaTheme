@@ -44,7 +44,33 @@ Per pubblicarlo con **GitHub Pages**: Settings → Pages → _Deploy from a bran
 → branch `main`, cartella `/ (root)`. Il sito sarà su
 `https://<utente>.github.io/SecretSantaTheme/` e legge i temi da `temi.json`.
 
+## Bot Telegram
+
+`bot_telegram.py` porta lo stesso oracolo su Telegram (stesso `temi.json`, solo
+Python 3, nessuna dipendenza). Comandi:
+
+- `/tema` — evoca **un** tema a caso (con un po' di suspense)
+- `/vota [N]` — genera N temi (2–10, default 5) e apre un **sondaggio nativo**
+  di Telegram per farli votare al gruppo
+- `/regali [N]` — estrae N temi (default 8), uno per regalo
+- `/help` — istruzioni
+
+**Setup:**
+
+1. Crea il bot con [@BotFather](https://t.me/BotFather) → ottieni il token.
+2. Passa il token come variabile d'ambiente (**non** va scritto nel codice né
+   committato) e avvia:
+
+   ```bash
+   export TELEGRAM_BOT_TOKEN="123456:ABC-..."
+   python3 bot_telegram.py
+   ```
+
+Il bot usa long-polling: va tenuto in esecuzione su una macchina/server (il PC,
+una VPS, ecc.). Per il voto in gruppo, aggiungi il bot al gruppo e usa `/vota`.
+
 ## Note
 
 Repository volutamente generico: nessun nome, nessuna informazione personale,
-nessun riferimento a partecipanti o eventi specifici. Solo temi.
+nessun riferimento a partecipanti o eventi specifici. Solo temi. Il token del
+bot Telegram si passa via variabile d'ambiente e non è presente nel repo.
