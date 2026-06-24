@@ -1,0 +1,2502 @@
+[
+  {
+    "id": 1,
+    "categoria": "oggetti impossibili",
+    "tema": "Una scatola che contiene se stessa"
+  },
+  {
+    "id": 2,
+    "categoria": "emozioni astratte",
+    "tema": "La nostalgia di un luogo mai visto"
+  },
+  {
+    "id": 3,
+    "categoria": "burocrazia surreale",
+    "tema": "Il timbro che approva i sogni"
+  },
+  {
+    "id": 4,
+    "categoria": "gastronomia improbabile",
+    "tema": "La zuppa dei rimpianti"
+  },
+  {
+    "id": 5,
+    "categoria": "creature assurde",
+    "tema": "Un drago che colleziona bollette scadute"
+  },
+  {
+    "id": 6,
+    "categoria": "concetti filosofici",
+    "tema": "L'entropia in una scatola"
+  },
+  {
+    "id": 7,
+    "categoria": "nostalgia retrò",
+    "tema": "Il fruscio del modem 56k"
+  },
+  {
+    "id": 8,
+    "categoria": "onirico surreale",
+    "tema": "La mappa di un sogno ricorrente"
+  },
+  {
+    "id": 9,
+    "categoria": "tecnologia distopica",
+    "tema": "Abbonamento mensile per respirare aria pulita"
+  },
+  {
+    "id": 10,
+    "categoria": "rituali quotidiani",
+    "tema": "L'arte di rimandare a domani"
+  },
+  {
+    "id": 11,
+    "categoria": "oggetti impossibili",
+    "tema": "Il triangolo impossibile di Penrose"
+  },
+  {
+    "id": 12,
+    "categoria": "emozioni astratte",
+    "tema": "La malinconia delle domeniche pomeriggio"
+  },
+  {
+    "id": 13,
+    "categoria": "burocrazia surreale",
+    "tema": "Modulo per dimettersi dalla realtà"
+  },
+  {
+    "id": 14,
+    "categoria": "gastronomia improbabile",
+    "tema": "Biscotti a forma di lunedì"
+  },
+  {
+    "id": 15,
+    "categoria": "creature assurde",
+    "tema": "La lumaca più veloce dell'universo"
+  },
+  {
+    "id": 16,
+    "categoria": "concetti filosofici",
+    "tema": "Il libero arbitrio di un calzino"
+  },
+  {
+    "id": 17,
+    "categoria": "nostalgia retrò",
+    "tema": "Una cassetta riavvolta con la penna"
+  },
+  {
+    "id": 18,
+    "categoria": "onirico surreale",
+    "tema": "Il rumore che fa il buio"
+  },
+  {
+    "id": 19,
+    "categoria": "tecnologia distopica",
+    "tema": "Il telecomando universale dell'umore"
+  },
+  {
+    "id": 20,
+    "categoria": "rituali quotidiani",
+    "tema": "La cerimonia del primo caffè"
+  },
+  {
+    "id": 21,
+    "categoria": "oggetti impossibili",
+    "tema": "Una scala che sale all'infinito"
+  },
+  {
+    "id": 22,
+    "categoria": "emozioni astratte",
+    "tema": "L'imbarazzo di un robot timido"
+  },
+  {
+    "id": 23,
+    "categoria": "burocrazia surreale",
+    "tema": "La riunione che non finisce mai"
+  },
+  {
+    "id": 24,
+    "categoria": "gastronomia improbabile",
+    "tema": "Il gusto del numero sette"
+  },
+  {
+    "id": 25,
+    "categoria": "creature assurde",
+    "tema": "Il gatto burocrate con timbro"
+  },
+  {
+    "id": 26,
+    "categoria": "concetti filosofici",
+    "tema": "La gravità di un abbraccio mancato"
+  },
+  {
+    "id": 27,
+    "categoria": "nostalgia retrò",
+    "tema": "L'odore della sala giochi"
+  },
+  {
+    "id": 28,
+    "categoria": "onirico surreale",
+    "tema": "L'oggetto dimenticato in un incubo"
+  },
+  {
+    "id": 29,
+    "categoria": "tecnologia distopica",
+    "tema": "Sveglia che ti urla affetto tossico"
+  },
+  {
+    "id": 30,
+    "categoria": "rituali quotidiani",
+    "tema": "Il culto del calzino spaiato"
+  },
+  {
+    "id": 31,
+    "categoria": "oggetti impossibili",
+    "tema": "Un nodo senza inizio né fine"
+  },
+  {
+    "id": 32,
+    "categoria": "emozioni astratte",
+    "tema": "Il coraggio di una tazzina vuota"
+  },
+  {
+    "id": 33,
+    "categoria": "burocrazia surreale",
+    "tema": "Verbale dell'assenza di verbale"
+  },
+  {
+    "id": 34,
+    "categoria": "gastronomia improbabile",
+    "tema": "Marmellata di nostalgia"
+  },
+  {
+    "id": 35,
+    "categoria": "creature assurde",
+    "tema": "Una fenice che rinasce malvolentieri"
+  },
+  {
+    "id": 36,
+    "categoria": "concetti filosofici",
+    "tema": "Lo spazio-tempo piegato in origami"
+  },
+  {
+    "id": 37,
+    "categoria": "nostalgia retrò",
+    "tema": "Il Tamagotchi morto di fame"
+  },
+  {
+    "id": 38,
+    "categoria": "onirico surreale",
+    "tema": "Il peso di una nuvola caduta"
+  },
+  {
+    "id": 39,
+    "categoria": "tecnologia distopica",
+    "tema": "Pillole di sonno in bottiglia"
+  },
+  {
+    "id": 40,
+    "categoria": "rituali quotidiani",
+    "tema": "Liturgia dello snooze infinito"
+  },
+  {
+    "id": 41,
+    "categoria": "oggetti impossibili",
+    "tema": "Il cubo che è anche piatto"
+  },
+  {
+    "id": 42,
+    "categoria": "emozioni astratte",
+    "tema": "La saudade del primo caffè"
+  },
+  {
+    "id": 43,
+    "categoria": "burocrazia surreale",
+    "tema": "Graffetta che tiene insieme l'universo"
+  },
+  {
+    "id": 44,
+    "categoria": "gastronomia improbabile",
+    "tema": "Caramelle al sapore di silenzio"
+  },
+  {
+    "id": 45,
+    "categoria": "creature assurde",
+    "tema": "Il polpo che firma contratti"
+  },
+  {
+    "id": 46,
+    "categoria": "concetti filosofici",
+    "tema": "Il principio di indeterminazione regalato"
+  },
+  {
+    "id": 47,
+    "categoria": "nostalgia retrò",
+    "tema": "Il floppy disk da 1,44 MB"
+  },
+  {
+    "id": 48,
+    "categoria": "onirico surreale",
+    "tema": "La valigia che non si chiude mai"
+  },
+  {
+    "id": 49,
+    "categoria": "tecnologia distopica",
+    "tema": "Wi-Fi per le emozioni inutilizzate"
+  },
+  {
+    "id": 50,
+    "categoria": "rituali quotidiani",
+    "tema": "L'arte marziale di fare il letto"
+  },
+  {
+    "id": 51,
+    "categoria": "oggetti impossibili",
+    "tema": "Una clessidra che misura il nulla"
+  },
+  {
+    "id": 52,
+    "categoria": "emozioni astratte",
+    "tema": "L'euforia di un calzino spaiato"
+  },
+  {
+    "id": 53,
+    "categoria": "burocrazia surreale",
+    "tema": "Ufficio reclami per il destino"
+  },
+  {
+    "id": 54,
+    "categoria": "gastronomia improbabile",
+    "tema": "Risotto cucinato dalla pioggia"
+  },
+  {
+    "id": 55,
+    "categoria": "creature assurde",
+    "tema": "Unicorno con allergia ai glitter"
+  },
+  {
+    "id": 56,
+    "categoria": "concetti filosofici",
+    "tema": "La terza legge di Newton in pantofole"
+  },
+  {
+    "id": 57,
+    "categoria": "nostalgia retrò",
+    "tema": "La schermata blu di Windows 95"
+  },
+  {
+    "id": 58,
+    "categoria": "onirico surreale",
+    "tema": "Le scale che non finiscono"
+  },
+  {
+    "id": 59,
+    "categoria": "tecnologia distopica",
+    "tema": "Tostapane con coscienza esistenziale"
+  },
+  {
+    "id": 60,
+    "categoria": "rituali quotidiani",
+    "tema": "La via mistica del telecomando perduto"
+  },
+  {
+    "id": 61,
+    "categoria": "oggetti impossibili",
+    "tema": "Il bicchiere mezzo pieno e mezzo vuoto"
+  },
+  {
+    "id": 62,
+    "categoria": "emozioni astratte",
+    "tema": "La tenerezza di un ombrello rotto"
+  },
+  {
+    "id": 63,
+    "categoria": "burocrazia surreale",
+    "tema": "Pratica smarrita da settant'anni"
+  },
+  {
+    "id": 64,
+    "categoria": "gastronomia improbabile",
+    "tema": "Pane che ricorda l'estate"
+  },
+  {
+    "id": 65,
+    "categoria": "creature assurde",
+    "tema": "Il grifone contabile in pausa pranzo"
+  },
+  {
+    "id": 66,
+    "categoria": "concetti filosofici",
+    "tema": "L'effetto farfalla in un barattolo"
+  },
+  {
+    "id": 67,
+    "categoria": "nostalgia retrò",
+    "tema": "Il walkman che mangia il nastro"
+  },
+  {
+    "id": 68,
+    "categoria": "onirico surreale",
+    "tema": "Il telefono che squilla nel sonno"
+  },
+  {
+    "id": 69,
+    "categoria": "tecnologia distopica",
+    "tema": "Caricabatterie per anime stanche"
+  },
+  {
+    "id": 70,
+    "categoria": "rituali quotidiani",
+    "tema": "Estetica della briciola nel burro"
+  },
+  {
+    "id": 71,
+    "categoria": "oggetti impossibili",
+    "tema": "Una bottiglia con un solo lato"
+  },
+  {
+    "id": 72,
+    "categoria": "emozioni astratte",
+    "tema": "L'ansia da pagina bianca"
+  },
+  {
+    "id": 73,
+    "categoria": "burocrazia surreale",
+    "tema": "Cestino della carta straccia infinito"
+  },
+  {
+    "id": 74,
+    "categoria": "gastronomia improbabile",
+    "tema": "Gelato al gusto di déjà-vu"
+  },
+  {
+    "id": 75,
+    "categoria": "creature assurde",
+    "tema": "Sirena che odia l'acqua salata"
+  },
+  {
+    "id": 76,
+    "categoria": "concetti filosofici",
+    "tema": "Il vuoto quantistico profumato"
+  },
+  {
+    "id": 77,
+    "categoria": "nostalgia retrò",
+    "tema": "Il Game Boy a luce di candela"
+  },
+  {
+    "id": 78,
+    "categoria": "onirico surreale",
+    "tema": "La stanza che cambia ogni notte"
+  },
+  {
+    "id": 79,
+    "categoria": "tecnologia distopica",
+    "tema": "Aggiornamento firmware della tua personalità"
+  },
+  {
+    "id": 80,
+    "categoria": "rituali quotidiani",
+    "tema": "Il rito del riscaldamento delle pantofole"
+  },
+  {
+    "id": 81,
+    "categoria": "oggetti impossibili",
+    "tema": "L'ombra più pesante della luce"
+  },
+  {
+    "id": 82,
+    "categoria": "emozioni astratte",
+    "tema": "La nostalgia del futuro che verrà"
+  },
+  {
+    "id": 83,
+    "categoria": "burocrazia surreale",
+    "tema": "Fotocopiatrice che duplica l'anima"
+  },
+  {
+    "id": 84,
+    "categoria": "gastronomia improbabile",
+    "tema": "La torta dei sogni dimenticati"
+  },
+  {
+    "id": 85,
+    "categoria": "creature assurde",
+    "tema": "Il minotauro perso nel suo labirinto"
+  },
+  {
+    "id": 86,
+    "categoria": "concetti filosofici",
+    "tema": "La relatività di un orologio rotto"
+  },
+  {
+    "id": 87,
+    "categoria": "nostalgia retrò",
+    "tema": "La suoneria polifonica del Nokia"
+  },
+  {
+    "id": 88,
+    "categoria": "onirico surreale",
+    "tema": "Il treno perso per sempre"
+  },
+  {
+    "id": 89,
+    "categoria": "tecnologia distopica",
+    "tema": "Antivirus contro i pensieri intrusivi"
+  },
+  {
+    "id": 90,
+    "categoria": "rituali quotidiani",
+    "tema": "La sacra arte di scegliere i fusilli"
+  },
+  {
+    "id": 91,
+    "categoria": "oggetti impossibili",
+    "tema": "Un anello a una sola faccia"
+  },
+  {
+    "id": 92,
+    "categoria": "emozioni astratte",
+    "tema": "Il sollievo dopo lo starnuto"
+  },
+  {
+    "id": 93,
+    "categoria": "burocrazia surreale",
+    "tema": "Post-it dell'ultima volontà"
+  },
+  {
+    "id": 94,
+    "categoria": "gastronomia improbabile",
+    "tema": "Spaghetti annodati come pensieri"
+  },
+  {
+    "id": 95,
+    "categoria": "creature assurde",
+    "tema": "Pinguino in missione tropicale segreta"
+  },
+  {
+    "id": 96,
+    "categoria": "concetti filosofici",
+    "tema": "L'inerzia di un divano filosofico"
+  },
+  {
+    "id": 97,
+    "categoria": "nostalgia retrò",
+    "tema": "Il cubo di Rubik mai risolto"
+  },
+  {
+    "id": 98,
+    "categoria": "onirico surreale",
+    "tema": "L'orologio che si scioglie lentamente"
+  },
+  {
+    "id": 99,
+    "categoria": "tecnologia distopica",
+    "tema": "Cuffie che cancellano le persone moleste"
+  },
+  {
+    "id": 100,
+    "categoria": "rituali quotidiani",
+    "tema": "Cerimoniale del cassetto che non si chiude"
+  },
+  {
+    "id": 101,
+    "categoria": "oggetti impossibili",
+    "tema": "Il dado con sette facce"
+  },
+  {
+    "id": 102,
+    "categoria": "emozioni astratte",
+    "tema": "La malinconia delle luci spente"
+  },
+  {
+    "id": 103,
+    "categoria": "burocrazia surreale",
+    "tema": "Code per fare la coda"
+  },
+  {
+    "id": 104,
+    "categoria": "gastronomia improbabile",
+    "tema": "Cioccolato che sa di domenica sera"
+  },
+  {
+    "id": 105,
+    "categoria": "creature assurde",
+    "tema": "Il kraken che teme le pozzanghere"
+  },
+  {
+    "id": 106,
+    "categoria": "concetti filosofici",
+    "tema": "La dialettica hegeliana di una spugna"
+  },
+  {
+    "id": 107,
+    "categoria": "nostalgia retrò",
+    "tema": "Lo slime nel barattolo"
+  },
+  {
+    "id": 108,
+    "categoria": "onirico surreale",
+    "tema": "La porta dietro la porta"
+  },
+  {
+    "id": 109,
+    "categoria": "tecnologia distopica",
+    "tema": "Termostato per regolare la nostalgia"
+  },
+  {
+    "id": 110,
+    "categoria": "rituali quotidiani",
+    "tema": "L'eleganza del raschiare l'ultimo vasetto"
+  },
+  {
+    "id": 111,
+    "categoria": "oggetti impossibili",
+    "tema": "Una sfera con gli angoli"
+  },
+  {
+    "id": 112,
+    "categoria": "emozioni astratte",
+    "tema": "L'orgoglio di una pianta dimenticata"
+  },
+  {
+    "id": 113,
+    "categoria": "burocrazia surreale",
+    "tema": "Pausa caffè in eternità sospesa"
+  },
+  {
+    "id": 114,
+    "categoria": "gastronomia improbabile",
+    "tema": "Tè distillato dalle nuvole"
+  },
+  {
+    "id": 115,
+    "categoria": "creature assurde",
+    "tema": "Yeti con la pelle delicata"
+  },
+  {
+    "id": 116,
+    "categoria": "concetti filosofici",
+    "tema": "Il dualismo onda-particella in tazza"
+  },
+  {
+    "id": 117,
+    "categoria": "nostalgia retrò",
+    "tema": "La VHS che chiede di riavvolgere"
+  },
+  {
+    "id": 118,
+    "categoria": "onirico surreale",
+    "tema": "Il corridoio che respira"
+  },
+  {
+    "id": 119,
+    "categoria": "tecnologia distopica",
+    "tema": "Distributore automatico di scuse credibili"
+  },
+  {
+    "id": 120,
+    "categoria": "rituali quotidiani",
+    "tema": "Filosofia del tappo della penna mordicchiato"
+  },
+  {
+    "id": 121,
+    "categoria": "oggetti impossibili",
+    "tema": "Il cerchio quadrato perfetto"
+  },
+  {
+    "id": 122,
+    "categoria": "emozioni astratte",
+    "tema": "La gioia inutile di un fiammifero"
+  },
+  {
+    "id": 123,
+    "categoria": "burocrazia surreale",
+    "tema": "Cartella sospesa nel vuoto cosmico"
+  },
+  {
+    "id": 124,
+    "categoria": "gastronomia improbabile",
+    "tema": "Cracker che scricchiolano di paura"
+  },
+  {
+    "id": 125,
+    "categoria": "creature assurde",
+    "tema": "Il centauro che corre la maratona"
+  },
+  {
+    "id": 126,
+    "categoria": "concetti filosofici",
+    "tema": "L'imperativo categorico tascabile"
+  },
+  {
+    "id": 127,
+    "categoria": "nostalgia retrò",
+    "tema": "Il telefono con il filo arricciato"
+  },
+  {
+    "id": 128,
+    "categoria": "onirico surreale",
+    "tema": "La chiave di una serratura inesistente"
+  },
+  {
+    "id": 129,
+    "categoria": "tecnologia distopica",
+    "tema": "Drone da compagnia leggermente depresso"
+  },
+  {
+    "id": 130,
+    "categoria": "rituali quotidiani",
+    "tema": "Il solenne scongelamento del freezer"
+  },
+  {
+    "id": 131,
+    "categoria": "oggetti impossibili",
+    "tema": "Una porta che apre su se stessa"
+  },
+  {
+    "id": 132,
+    "categoria": "emozioni astratte",
+    "tema": "Il vuoto delle valigie fatte"
+  },
+  {
+    "id": 133,
+    "categoria": "burocrazia surreale",
+    "tema": "Il fermacarte contro i pensieri volanti"
+  },
+  {
+    "id": 134,
+    "categoria": "gastronomia improbabile",
+    "tema": "Minestrone delle parole non dette"
+  },
+  {
+    "id": 135,
+    "categoria": "creature assurde",
+    "tema": "Vampiro intollerante al pomodoro"
+  },
+  {
+    "id": 136,
+    "categoria": "concetti filosofici",
+    "tema": "Il gatto di Schrödinger sottovuoto"
+  },
+  {
+    "id": 137,
+    "categoria": "nostalgia retrò",
+    "tema": "Il diario segreto col lucchetto"
+  },
+  {
+    "id": 138,
+    "categoria": "onirico surreale",
+    "tema": "Il volo a braccia aperte"
+  },
+  {
+    "id": 139,
+    "categoria": "tecnologia distopica",
+    "tema": "Occhiali a realtà delusa"
+  },
+  {
+    "id": 140,
+    "categoria": "rituali quotidiani",
+    "tema": "Liturgia mattutina del frigorifero aperto"
+  },
+  {
+    "id": 141,
+    "categoria": "oggetti impossibili",
+    "tema": "Il labirinto senza uscita e senza entrata"
+  },
+  {
+    "id": 142,
+    "categoria": "emozioni astratte",
+    "tema": "La paura felice del lunedì"
+  },
+  {
+    "id": 143,
+    "categoria": "burocrazia surreale",
+    "tema": "Domanda in triplice copia per esistere"
+  },
+  {
+    "id": 144,
+    "categoria": "gastronomia improbabile",
+    "tema": "Confettura di tramonti scaduti"
+  },
+  {
+    "id": 145,
+    "categoria": "creature assurde",
+    "tema": "Il licantropo che conta le pecore"
+  },
+  {
+    "id": 146,
+    "categoria": "concetti filosofici",
+    "tema": "La caverna di Platone portatile"
+  },
+  {
+    "id": 147,
+    "categoria": "nostalgia retrò",
+    "tema": "Le figurine doppione introvabili"
+  },
+  {
+    "id": 148,
+    "categoria": "onirico surreale",
+    "tema": "La caduta senza fondo"
+  },
+  {
+    "id": 149,
+    "categoria": "tecnologia distopica",
+    "tema": "Abbonamento premium al silenzio"
+  },
+  {
+    "id": 150,
+    "categoria": "rituali quotidiani",
+    "tema": "L'arte di annusare il latte dubbioso"
+  },
+  {
+    "id": 151,
+    "categoria": "oggetti impossibili",
+    "tema": "Un orologio che gira al contrario"
+  },
+  {
+    "id": 152,
+    "categoria": "emozioni astratte",
+    "tema": "L'estasi di un lenzuolo fresco"
+  },
+  {
+    "id": 153,
+    "categoria": "burocrazia surreale",
+    "tema": "Macchinetta del caffè senza speranza"
+  },
+  {
+    "id": 154,
+    "categoria": "gastronomia improbabile",
+    "tema": "Sale raccolto dalle lacrime felici"
+  },
+  {
+    "id": 155,
+    "categoria": "creature assurde",
+    "tema": "Cerbero con tre raffreddori contemporanei"
+  },
+  {
+    "id": 156,
+    "categoria": "concetti filosofici",
+    "tema": "L'attrito esistenziale di una candela"
+  },
+  {
+    "id": 157,
+    "categoria": "nostalgia retrò",
+    "tema": "Il Furby che parla di notte"
+  },
+  {
+    "id": 158,
+    "categoria": "onirico surreale",
+    "tema": "Lo specchio che non ti riflette"
+  },
+  {
+    "id": 159,
+    "categoria": "tecnologia distopica",
+    "tema": "Robot domestico che giudica le tue scelte"
+  },
+  {
+    "id": 160,
+    "categoria": "rituali quotidiani",
+    "tema": "Il culto del cuscino dal lato fresco"
+  },
+  {
+    "id": 161,
+    "categoria": "oggetti impossibili",
+    "tema": "La linea che torna sempre indietro"
+  },
+  {
+    "id": 162,
+    "categoria": "emozioni astratte",
+    "tema": "Il rancore silenzioso del termosifone"
+  },
+  {
+    "id": 163,
+    "categoria": "burocrazia surreale",
+    "tema": "Distributore di moduli inutili"
+  },
+  {
+    "id": 164,
+    "categoria": "gastronomia improbabile",
+    "tema": "Miele prodotto da api filosofe"
+  },
+  {
+    "id": 165,
+    "categoria": "creature assurde",
+    "tema": "Il basilisco con gli occhiali da sole"
+  },
+  {
+    "id": 166,
+    "categoria": "concetti filosofici",
+    "tema": "Il moto perpetuo di un cucchiaino"
+  },
+  {
+    "id": 167,
+    "categoria": "nostalgia retrò",
+    "tema": "La cartuccia da soffiare per giocare"
+  },
+  {
+    "id": 168,
+    "categoria": "onirico surreale",
+    "tema": "Il pesce che vola nel cielo"
+  },
+  {
+    "id": 169,
+    "categoria": "tecnologia distopica",
+    "tema": "Batteria di riserva per la pazienza"
+  },
+  {
+    "id": 170,
+    "categoria": "rituali quotidiani",
+    "tema": "Meditazione sul rotolo finito di carta"
+  },
+  {
+    "id": 171,
+    "categoria": "oggetti impossibili",
+    "tema": "Un gradino verso il soffitto"
+  },
+  {
+    "id": 172,
+    "categoria": "emozioni astratte",
+    "tema": "La poesia di un cassetto chiuso"
+  },
+  {
+    "id": 173,
+    "categoria": "burocrazia surreale",
+    "tema": "Scrivania che cresce all'infinito"
+  },
+  {
+    "id": 174,
+    "categoria": "gastronomia improbabile",
+    "tema": "Frittata cosmica con stelle saltate"
+  },
+  {
+    "id": 175,
+    "categoria": "creature assurde",
+    "tema": "Medusa che cambia acconciatura ogni ora"
+  },
+  {
+    "id": 176,
+    "categoria": "concetti filosofici",
+    "tema": "La nostalgia secondo la termodinamica"
+  },
+  {
+    "id": 177,
+    "categoria": "nostalgia retrò",
+    "tema": "Il cd masterizzato senza copertina"
+  },
+  {
+    "id": 178,
+    "categoria": "onirico surreale",
+    "tema": "La luna nel cassetto della cucina"
+  },
+  {
+    "id": 179,
+    "categoria": "tecnologia distopica",
+    "tema": "Specchio smart che mente per gentilezza"
+  },
+  {
+    "id": 180,
+    "categoria": "rituali quotidiani",
+    "tema": "La danza per evitare i Lego scalzi"
+  },
+  {
+    "id": 181,
+    "categoria": "oggetti impossibili",
+    "tema": "Il bilanciere che pesa zero"
+  },
+  {
+    "id": 182,
+    "categoria": "emozioni astratte",
+    "tema": "L'allegria malinconica dei coriandoli"
+  },
+  {
+    "id": 183,
+    "categoria": "burocrazia surreale",
+    "tema": "Cassetto delle pratiche mai evase"
+  },
+  {
+    "id": 184,
+    "categoria": "gastronomia improbabile",
+    "tema": "Yogurt fermentato nel vuoto"
+  },
+  {
+    "id": 185,
+    "categoria": "creature assurde",
+    "tema": "Il troll dei ponti esattore di pedaggi"
+  },
+  {
+    "id": 186,
+    "categoria": "concetti filosofici",
+    "tema": "Il paradosso di Zenone in scarpe"
+  },
+  {
+    "id": 187,
+    "categoria": "nostalgia retrò",
+    "tema": "Il dial-up che occupa il telefono"
+  },
+  {
+    "id": 188,
+    "categoria": "onirico surreale",
+    "tema": "Il letto che galleggia sull'acqua"
+  },
+  {
+    "id": 189,
+    "categoria": "tecnologia distopica",
+    "tema": "Sveglia analogica del 2099"
+  },
+  {
+    "id": 190,
+    "categoria": "rituali quotidiani",
+    "tema": "Cerimonia dello sbattere il telecomando"
+  },
+  {
+    "id": 191,
+    "categoria": "oggetti impossibili",
+    "tema": "Una mappa grande quanto il mondo"
+  },
+  {
+    "id": 192,
+    "categoria": "emozioni astratte",
+    "tema": "La solitudine luminosa dei fari"
+  },
+  {
+    "id": 193,
+    "categoria": "burocrazia surreale",
+    "tema": "Penna che firma le rinunce"
+  },
+  {
+    "id": 194,
+    "categoria": "gastronomia improbabile",
+    "tema": "Pizza condita con coriandoli"
+  },
+  {
+    "id": 195,
+    "categoria": "creature assurde",
+    "tema": "Fata stanca dei desideri altrui"
+  },
+  {
+    "id": 196,
+    "categoria": "concetti filosofici",
+    "tema": "L'infinito potenziale in un righello"
+  },
+  {
+    "id": 197,
+    "categoria": "nostalgia retrò",
+    "tema": "La penna a quattro colori"
+  },
+  {
+    "id": 198,
+    "categoria": "onirico surreale",
+    "tema": "L'ospite che non riconosci"
+  },
+  {
+    "id": 199,
+    "categoria": "tecnologia distopica",
+    "tema": "Telefono a gettoni interdimensionale"
+  },
+  {
+    "id": 200,
+    "categoria": "rituali quotidiani",
+    "tema": "L'epica del coperchio che non combacia"
+  },
+  {
+    "id": 201,
+    "categoria": "oggetti impossibili",
+    "tema": "Lo specchio che riflette il dietro"
+  },
+  {
+    "id": 202,
+    "categoria": "emozioni astratte",
+    "tema": "L'attesa infinita del bollitore"
+  },
+  {
+    "id": 203,
+    "categoria": "burocrazia surreale",
+    "tema": "Timbro 'respinto' sull'amore"
+  },
+  {
+    "id": 204,
+    "categoria": "gastronomia improbabile",
+    "tema": "Brodo bollito a luce di luna"
+  },
+  {
+    "id": 205,
+    "categoria": "creature assurde",
+    "tema": "Il golem che colleziona francobolli"
+  },
+  {
+    "id": 206,
+    "categoria": "concetti filosofici",
+    "tema": "La coscienza fermentata di un lievito"
+  },
+  {
+    "id": 207,
+    "categoria": "nostalgia retrò",
+    "tema": "Il poster strappato dal Cioè"
+  },
+  {
+    "id": 208,
+    "categoria": "onirico surreale",
+    "tema": "Il labirinto di lenzuola bianche"
+  },
+  {
+    "id": 209,
+    "categoria": "tecnologia distopica",
+    "tema": "Stampante 3D di rimpianti"
+  },
+  {
+    "id": 210,
+    "categoria": "rituali quotidiani",
+    "tema": "Il rito segreto delle chiavi smarrite"
+  },
+  {
+    "id": 211,
+    "categoria": "oggetti impossibili",
+    "tema": "Un buco che sporge in fuori"
+  },
+  {
+    "id": 212,
+    "categoria": "emozioni astratte",
+    "tema": "La vertigine di un foglio piegato"
+  },
+  {
+    "id": 213,
+    "categoria": "burocrazia surreale",
+    "tema": "Protocollo per dimenticare il lunedì"
+  },
+  {
+    "id": 214,
+    "categoria": "gastronomia improbabile",
+    "tema": "Cupcake al gusto di mercoledì"
+  },
+  {
+    "id": 215,
+    "categoria": "creature assurde",
+    "tema": "Pegaso con paura dell'altezza"
+  },
+  {
+    "id": 216,
+    "categoria": "concetti filosofici",
+    "tema": "Il determinismo di una sveglia"
+  },
+  {
+    "id": 217,
+    "categoria": "nostalgia retrò",
+    "tema": "Le mollette luminose anni '90"
+  },
+  {
+    "id": 218,
+    "categoria": "onirico surreale",
+    "tema": "La pioggia che cade verso l'alto"
+  },
+  {
+    "id": 219,
+    "categoria": "tecnologia distopica",
+    "tema": "Assistente vocale passivo-aggressivo"
+  },
+  {
+    "id": 220,
+    "categoria": "rituali quotidiani",
+    "tema": "Arte sublime del nodo alle cuffie"
+  },
+  {
+    "id": 221,
+    "categoria": "oggetti impossibili",
+    "tema": "La piramide capovolta stabile"
+  },
+  {
+    "id": 222,
+    "categoria": "emozioni astratte",
+    "tema": "La nostalgia degli odori d'infanzia"
+  },
+  {
+    "id": 223,
+    "categoria": "burocrazia surreale",
+    "tema": "Faldone delle scuse non accettate"
+  },
+  {
+    "id": 224,
+    "categoria": "gastronomia improbabile",
+    "tema": "Liquore di echi lontani"
+  },
+  {
+    "id": 225,
+    "categoria": "creature assurde",
+    "tema": "Il chupacabra vegetariano convinto"
+  },
+  {
+    "id": 226,
+    "categoria": "concetti filosofici",
+    "tema": "L'antimateria di un calzino spaiato"
+  },
+  {
+    "id": 227,
+    "categoria": "nostalgia retrò",
+    "tema": "Il joystick con la ventosa"
+  },
+  {
+    "id": 228,
+    "categoria": "onirico surreale",
+    "tema": "Il sussurro di una statua"
+  },
+  {
+    "id": 229,
+    "categoria": "tecnologia distopica",
+    "tema": "Frigorifero che recensisce la tua dieta"
+  },
+  {
+    "id": 230,
+    "categoria": "rituali quotidiani",
+    "tema": "Liturgia della busta che non si apre"
+  },
+  {
+    "id": 231,
+    "categoria": "oggetti impossibili",
+    "tema": "Un fiocco di neve cubico"
+  },
+  {
+    "id": 232,
+    "categoria": "emozioni astratte",
+    "tema": "Il candore stanco della neve sporca"
+  },
+  {
+    "id": 233,
+    "categoria": "burocrazia surreale",
+    "tema": "Il tagliacarte dei legami affettivi"
+  },
+  {
+    "id": 234,
+    "categoria": "gastronomia improbabile",
+    "tema": "Croissant ripieni di mattine pigre"
+  },
+  {
+    "id": 235,
+    "categoria": "creature assurde",
+    "tema": "Gnomo sindacalista dei boschi"
+  },
+  {
+    "id": 236,
+    "categoria": "concetti filosofici",
+    "tema": "La sintropia di una pianta grassa"
+  },
+  {
+    "id": 237,
+    "categoria": "nostalgia retrò",
+    "tema": "La macchina fotografica usa e getta"
+  },
+  {
+    "id": 238,
+    "categoria": "onirico surreale",
+    "tema": "La casa dell'infanzia capovolta"
+  },
+  {
+    "id": 239,
+    "categoria": "tecnologia distopica",
+    "tema": "Visore VR per fuggire dalle riunioni"
+  },
+  {
+    "id": 240,
+    "categoria": "rituali quotidiani",
+    "tema": "Il culto della sedia portavestiti"
+  },
+  {
+    "id": 241,
+    "categoria": "oggetti impossibili",
+    "tema": "Il vuoto perfettamente solido"
+  },
+  {
+    "id": 242,
+    "categoria": "emozioni astratte",
+    "tema": "L'imbarazzo di un applauso fuori tempo"
+  },
+  {
+    "id": 243,
+    "categoria": "burocrazia surreale",
+    "tema": "Bollino di qualità sul nulla"
+  },
+  {
+    "id": 244,
+    "categoria": "gastronomia improbabile",
+    "tema": "Zucchero filato di nebbia mattutina"
+  },
+  {
+    "id": 245,
+    "categoria": "creature assurde",
+    "tema": "Il leviatano in una vasca da bagno"
+  },
+  {
+    "id": 246,
+    "categoria": "concetti filosofici",
+    "tema": "Il nichilismo allegro di un palloncino"
+  },
+  {
+    "id": 247,
+    "categoria": "nostalgia retrò",
+    "tema": "Il mangianastri portatile a tracolla"
+  },
+  {
+    "id": 248,
+    "categoria": "onirico surreale",
+    "tema": "Il sapore di un colore dimenticato"
+  },
+  {
+    "id": 249,
+    "categoria": "tecnologia distopica",
+    "tema": "Sensore di vibrazioni cosmiche negative"
+  },
+  {
+    "id": 250,
+    "categoria": "rituali quotidiani",
+    "tema": "L'estasi dello schiacciare i pluriball"
+  },
+  {
+    "id": 251,
+    "categoria": "oggetti impossibili",
+    "tema": "Una corda che cade verso l'alto"
+  },
+  {
+    "id": 252,
+    "categoria": "emozioni astratte",
+    "tema": "La quiete inquieta delle biblioteche"
+  },
+  {
+    "id": 253,
+    "categoria": "burocrazia surreale",
+    "tema": "Ufficio oggetti smarriti dell'anima"
+  },
+  {
+    "id": 254,
+    "categoria": "gastronomia improbabile",
+    "tema": "Insalata di ricordi croccanti"
+  },
+  {
+    "id": 255,
+    "categoria": "creature assurde",
+    "tema": "Salamandra che teme il fuoco"
+  },
+  {
+    "id": 256,
+    "categoria": "concetti filosofici",
+    "tema": "Il tempo profondo in un sasso"
+  },
+  {
+    "id": 257,
+    "categoria": "nostalgia retrò",
+    "tema": "Lo screensaver dei tubi 3D"
+  },
+  {
+    "id": 258,
+    "categoria": "onirico surreale",
+    "tema": "Le ali di cera al risveglio"
+  },
+  {
+    "id": 259,
+    "categoria": "tecnologia distopica",
+    "tema": "Chiavetta USB con backup dei ricordi"
+  },
+  {
+    "id": 260,
+    "categoria": "rituali quotidiani",
+    "tema": "Cerimoniale del divano inghiottiscose"
+  },
+  {
+    "id": 261,
+    "categoria": "oggetti impossibili",
+    "tema": "Il punto più grande dell'universo"
+  },
+  {
+    "id": 262,
+    "categoria": "emozioni astratte",
+    "tema": "Il desiderio di un viaggio annullato"
+  },
+  {
+    "id": 263,
+    "categoria": "burocrazia surreale",
+    "tema": "Tariffario delle pause inutili"
+  },
+  {
+    "id": 264,
+    "categoria": "gastronomia improbabile",
+    "tema": "Pasta al ragù di malinconia"
+  },
+  {
+    "id": 265,
+    "categoria": "creature assurde",
+    "tema": "Il gargoyle che odia stare fermo"
+  },
+  {
+    "id": 266,
+    "categoria": "concetti filosofici",
+    "tema": "La metafisica di un poggiatazze"
+  },
+  {
+    "id": 267,
+    "categoria": "nostalgia retrò",
+    "tema": "La gomma profumata alla fragola"
+  },
+  {
+    "id": 268,
+    "categoria": "onirico surreale",
+    "tema": "Il gatto che parla in codice"
+  },
+  {
+    "id": 269,
+    "categoria": "tecnologia distopica",
+    "tema": "Lampada smart con disturbi d'ansia"
+  },
+  {
+    "id": 270,
+    "categoria": "rituali quotidiani",
+    "tema": "La sacra pausa prima dell'alzarsi"
+  },
+  {
+    "id": 271,
+    "categoria": "oggetti impossibili",
+    "tema": "Una piega che non finisce mai"
+  },
+  {
+    "id": 272,
+    "categoria": "emozioni astratte",
+    "tema": "La tristezza tiepida del tè freddo"
+  },
+  {
+    "id": 273,
+    "categoria": "burocrazia surreale",
+    "tema": "Risma di carta per non scrivere"
+  },
+  {
+    "id": 274,
+    "categoria": "gastronomia improbabile",
+    "tema": "Granita al gusto di vertigine"
+  },
+  {
+    "id": 275,
+    "categoria": "creature assurde",
+    "tema": "Idra con problemi di memoria multipla"
+  },
+  {
+    "id": 276,
+    "categoria": "concetti filosofici",
+    "tema": "L'energia oscura in candeggina"
+  },
+  {
+    "id": 277,
+    "categoria": "nostalgia retrò",
+    "tema": "Il dinosauro di Windows ME"
+  },
+  {
+    "id": 278,
+    "categoria": "onirico surreale",
+    "tema": "La marea dentro la camera da letto"
+  },
+  {
+    "id": 279,
+    "categoria": "tecnologia distopica",
+    "tema": "Aspirapolvere che insegue i sogni"
+  },
+  {
+    "id": 280,
+    "categoria": "rituali quotidiani",
+    "tema": "L'arte di impilare i piatti vacillanti"
+  },
+  {
+    "id": 281,
+    "categoria": "oggetti impossibili",
+    "tema": "L'infinito dentro un cassetto"
+  },
+  {
+    "id": 282,
+    "categoria": "emozioni astratte",
+    "tema": "L'ottimismo testardo dei semafori"
+  },
+  {
+    "id": 283,
+    "categoria": "burocrazia surreale",
+    "tema": "Calcolatrice che divide le responsabilità"
+  },
+  {
+    "id": 284,
+    "categoria": "gastronomia improbabile",
+    "tema": "Pancake impilati fino al cielo"
+  },
+  {
+    "id": 285,
+    "categoria": "creature assurde",
+    "tema": "Il behemoth a dieta ferrea"
+  },
+  {
+    "id": 286,
+    "categoria": "concetti filosofici",
+    "tema": "Il solipsismo di uno specchietto"
+  },
+  {
+    "id": 287,
+    "categoria": "nostalgia retrò",
+    "tema": "Il pennarello che colora la pelle"
+  },
+  {
+    "id": 288,
+    "categoria": "onirico surreale",
+    "tema": "Il filo che lega due sogni"
+  },
+  {
+    "id": 289,
+    "categoria": "tecnologia distopica",
+    "tema": "Macchina del caffè con crisi di mezza età"
+  },
+  {
+    "id": 290,
+    "categoria": "rituali quotidiani",
+    "tema": "Il rito di soffiare sulla minestra"
+  },
+  {
+    "id": 291,
+    "categoria": "oggetti impossibili",
+    "tema": "Un cubo di Rubik già risolto sempre"
+  },
+  {
+    "id": 292,
+    "categoria": "emozioni astratte",
+    "tema": "La serenità precaria di un equilibrista"
+  },
+  {
+    "id": 293,
+    "categoria": "burocrazia surreale",
+    "tema": "Modulo di reclamo contro il meteo"
+  },
+  {
+    "id": 294,
+    "categoria": "gastronomia improbabile",
+    "tema": "Vino invecchiato in bottiglie di tempo"
+  },
+  {
+    "id": 295,
+    "categoria": "creature assurde",
+    "tema": "Coccodrillo che piange di gioia"
+  },
+  {
+    "id": 296,
+    "categoria": "concetti filosofici",
+    "tema": "La fusione fredda di un cubetto"
+  },
+  {
+    "id": 297,
+    "categoria": "nostalgia retrò",
+    "tema": "Il braccialetto dell'amicizia intrecciato"
+  },
+  {
+    "id": 298,
+    "categoria": "onirico surreale",
+    "tema": "La candela che brucia al contrario"
+  },
+  {
+    "id": 299,
+    "categoria": "tecnologia distopica",
+    "tema": "Power bank per ricaricare l'autostima"
+  },
+  {
+    "id": 300,
+    "categoria": "rituali quotidiani",
+    "tema": "Liturgia del cubetto di ghiaccio caduto"
+  },
+  {
+    "id": 301,
+    "categoria": "oggetti impossibili",
+    "tema": "La goccia che non bagna"
+  },
+  {
+    "id": 302,
+    "categoria": "emozioni astratte",
+    "tema": "Il batticuore di una porta socchiusa"
+  },
+  {
+    "id": 303,
+    "categoria": "burocrazia surreale",
+    "tema": "Registro delle riunioni evitabili"
+  },
+  {
+    "id": 304,
+    "categoria": "gastronomia improbabile",
+    "tema": "Polpette di galassie lontane"
+  },
+  {
+    "id": 305,
+    "categoria": "creature assurde",
+    "tema": "Il ragno tessitore di maglioni"
+  },
+  {
+    "id": 306,
+    "categoria": "concetti filosofici",
+    "tema": "Il rasoio di Occam affilato male"
+  },
+  {
+    "id": 307,
+    "categoria": "nostalgia retrò",
+    "tema": "Il jingle di Carosello"
+  },
+  {
+    "id": 308,
+    "categoria": "onirico surreale",
+    "tema": "L'eco di una risata senza volto"
+  },
+  {
+    "id": 309,
+    "categoria": "tecnologia distopica",
+    "tema": "Convertitore di lacrime in energia pulita"
+  },
+  {
+    "id": 310,
+    "categoria": "rituali quotidiani",
+    "tema": "Filosofia del cassetto delle cianfrusaglie"
+  },
+  {
+    "id": 311,
+    "categoria": "oggetti impossibili",
+    "tema": "Un peso più leggero dell'aria"
+  },
+  {
+    "id": 312,
+    "categoria": "emozioni astratte",
+    "tema": "La meraviglia stanca dei planetari"
+  },
+  {
+    "id": 313,
+    "categoria": "burocrazia surreale",
+    "tema": "Spillatrice dei rapporti umani"
+  },
+  {
+    "id": 314,
+    "categoria": "gastronomia improbabile",
+    "tema": "Crema spalmabile di buonumore"
+  },
+  {
+    "id": 315,
+    "categoria": "creature assurde",
+    "tema": "Pesce rosso con ambizioni oceaniche"
+  },
+  {
+    "id": 316,
+    "categoria": "concetti filosofici",
+    "tema": "La causalità inversa di un boomerang"
+  },
+  {
+    "id": 317,
+    "categoria": "nostalgia retrò",
+    "tema": "La calcolatrice che scrive parole"
+  },
+  {
+    "id": 318,
+    "categoria": "onirico surreale",
+    "tema": "Il giardino sotto il pavimento"
+  },
+  {
+    "id": 319,
+    "categoria": "tecnologia distopica",
+    "tema": "Console retrò che gioca da sola"
+  },
+  {
+    "id": 320,
+    "categoria": "rituali quotidiani",
+    "tema": "L'epica battaglia con il lenzuolo con angoli"
+  },
+  {
+    "id": 321,
+    "categoria": "oggetti impossibili",
+    "tema": "Il pavimento che è anche soffitto"
+  },
+  {
+    "id": 322,
+    "categoria": "emozioni astratte",
+    "tema": "L'orgoglio ferito di un puzzle incompleto"
+  },
+  {
+    "id": 323,
+    "categoria": "burocrazia surreale",
+    "tema": "Badge per entrare nel limbo"
+  },
+  {
+    "id": 324,
+    "categoria": "gastronomia improbabile",
+    "tema": "Tortellini ripieni di segreti"
+  },
+  {
+    "id": 325,
+    "categoria": "creature assurde",
+    "tema": "Il riccio abbracciatore professionista"
+  },
+  {
+    "id": 326,
+    "categoria": "concetti filosofici",
+    "tema": "L'eternità compressa in un calendario"
+  },
+  {
+    "id": 327,
+    "categoria": "nostalgia retrò",
+    "tema": "Il diario delle scuole con gli adesivi"
+  },
+  {
+    "id": 328,
+    "categoria": "onirico surreale",
+    "tema": "La finestra che dà sul nulla"
+  },
+  {
+    "id": 329,
+    "categoria": "tecnologia distopica",
+    "tema": "Microonde quantistico per il passato"
+  },
+  {
+    "id": 330,
+    "categoria": "rituali quotidiani",
+    "tema": "Il culto della tazza preferita scheggiata"
+  },
+  {
+    "id": 331,
+    "categoria": "oggetti impossibili",
+    "tema": "Una candela che si allunga bruciando"
+  },
+  {
+    "id": 332,
+    "categoria": "emozioni astratte",
+    "tema": "La dolcezza amara delle caramelle vecchie"
+  },
+  {
+    "id": 333,
+    "categoria": "burocrazia surreale",
+    "tema": "Circolare interna sull'inutilità"
+  },
+  {
+    "id": 334,
+    "categoria": "gastronomia improbabile",
+    "tema": "Caffè macinato dai sogni"
+  },
+  {
+    "id": 335,
+    "categoria": "creature assurde",
+    "tema": "Tartaruga corriere espresso garantito"
+  },
+  {
+    "id": 336,
+    "categoria": "concetti filosofici",
+    "tema": "Il flusso di coscienza in bottiglia"
+  },
+  {
+    "id": 337,
+    "categoria": "nostalgia retrò",
+    "tema": "Il pongo seccato nel barattolo"
+  },
+  {
+    "id": 338,
+    "categoria": "onirico surreale",
+    "tema": "Il dente che cade nel palmo"
+  },
+  {
+    "id": 339,
+    "categoria": "tecnologia distopica",
+    "tema": "Bilancia smart eccessivamente sincera"
+  },
+  {
+    "id": 340,
+    "categoria": "rituali quotidiani",
+    "tema": "Cerimonia dell'apertura del barattolo ostinato"
+  },
+  {
+    "id": 341,
+    "categoria": "oggetti impossibili",
+    "tema": "L'angolo retto perfettamente curvo"
+  },
+  {
+    "id": 342,
+    "categoria": "emozioni astratte",
+    "tema": "Il coraggio timido di una candela"
+  },
+  {
+    "id": 343,
+    "categoria": "burocrazia surreale",
+    "tema": "Toner esaurito della creatività"
+  },
+  {
+    "id": 344,
+    "categoria": "gastronomia improbabile",
+    "tema": "Budino tremante di indecisione"
+  },
+  {
+    "id": 345,
+    "categoria": "creature assurde",
+    "tema": "Il pipistrello con paura del buio"
+  },
+  {
+    "id": 346,
+    "categoria": "concetti filosofici",
+    "tema": "La singolarità in un puntaspilli"
+  },
+  {
+    "id": 347,
+    "categoria": "nostalgia retrò",
+    "tema": "La televisione a tubo catodico"
+  },
+  {
+    "id": 348,
+    "categoria": "onirico surreale",
+    "tema": "La nebbia che ricorda il tuo nome"
+  },
+  {
+    "id": 349,
+    "categoria": "tecnologia distopica",
+    "tema": "Telecamera che filtra la realtà scomoda"
+  },
+  {
+    "id": 350,
+    "categoria": "rituali quotidiani",
+    "tema": "L'arte zen di srotolare lo scotch"
+  },
+  {
+    "id": 351,
+    "categoria": "oggetti impossibili",
+    "tema": "Un tetraedro con un solo spigolo"
+  },
+  {
+    "id": 352,
+    "categoria": "emozioni astratte",
+    "tema": "La nostalgia del rumore della pioggia"
+  },
+  {
+    "id": 353,
+    "categoria": "burocrazia surreale",
+    "tema": "Agenda piena di appuntamenti fantasma"
+  },
+  {
+    "id": 354,
+    "categoria": "gastronomia improbabile",
+    "tema": "Focaccia profumata di domeniche"
+  },
+  {
+    "id": 355,
+    "categoria": "creature assurde",
+    "tema": "Gufo insonne cronico notturno"
+  },
+  {
+    "id": 356,
+    "categoria": "concetti filosofici",
+    "tema": "Il vuoto di Pascal in tasca"
+  },
+  {
+    "id": 357,
+    "categoria": "nostalgia retrò",
+    "tema": "Il telecomando con il filo finto"
+  },
+  {
+    "id": 358,
+    "categoria": "onirico surreale",
+    "tema": "Il pendolo di un sonno profondo"
+  },
+  {
+    "id": 359,
+    "categoria": "tecnologia distopica",
+    "tema": "Walkie-talkie per parlare col futuro"
+  },
+  {
+    "id": 360,
+    "categoria": "rituali quotidiani",
+    "tema": "Liturgia del tostapane troppo entusiasta"
+  },
+  {
+    "id": 361,
+    "categoria": "oggetti impossibili",
+    "tema": "La spirale che non gira mai"
+  },
+  {
+    "id": 362,
+    "categoria": "emozioni astratte",
+    "tema": "L'euforia tranquilla del bucato steso"
+  },
+  {
+    "id": 363,
+    "categoria": "burocrazia surreale",
+    "tema": "Evidenziatore delle frasi vuote"
+  },
+  {
+    "id": 364,
+    "categoria": "gastronomia improbabile",
+    "tema": "Lecca-lecca al gusto di arcobaleno"
+  },
+  {
+    "id": 365,
+    "categoria": "creature assurde",
+    "tema": "Il bradipo manager molto efficiente"
+  },
+  {
+    "id": 366,
+    "categoria": "concetti filosofici",
+    "tema": "L'empirismo bagnato di una spugna"
+  },
+  {
+    "id": 367,
+    "categoria": "nostalgia retrò",
+    "tema": "Le scarpe con le rotelle nascoste"
+  },
+  {
+    "id": 368,
+    "categoria": "onirico surreale",
+    "tema": "La barca di carta nell'oceano nero"
+  },
+  {
+    "id": 369,
+    "categoria": "tecnologia distopica",
+    "tema": "Smartwatch che conta i secondi sprecati"
+  },
+  {
+    "id": 370,
+    "categoria": "rituali quotidiani",
+    "tema": "Il rito del soffio sulla candelina"
+  },
+  {
+    "id": 371,
+    "categoria": "oggetti impossibili",
+    "tema": "Un foglio con tre lati"
+  },
+  {
+    "id": 372,
+    "categoria": "emozioni astratte",
+    "tema": "La malinconia elettrica dei neon"
+  },
+  {
+    "id": 373,
+    "categoria": "burocrazia surreale",
+    "tema": "Modulo per autorizzare un sospiro"
+  },
+  {
+    "id": 374,
+    "categoria": "gastronomia improbabile",
+    "tema": "Risotto allo zafferano dell'aurora"
+  },
+  {
+    "id": 375,
+    "categoria": "creature assurde",
+    "tema": "Formica che delega tutto il lavoro"
+  },
+  {
+    "id": 376,
+    "categoria": "concetti filosofici",
+    "tema": "La fenomenologia di un profumo"
+  },
+  {
+    "id": 377,
+    "categoria": "nostalgia retrò",
+    "tema": "Il quaderno a quadretti da mezzo centimetro"
+  },
+  {
+    "id": 378,
+    "categoria": "onirico surreale",
+    "tema": "Il quadro che cambia quando dormi"
+  },
+  {
+    "id": 379,
+    "categoria": "tecnologia distopica",
+    "tema": "Ventilatore che soffia via i sensi di colpa"
+  },
+  {
+    "id": 380,
+    "categoria": "rituali quotidiani",
+    "tema": "Estetica della piega del tovagliolo"
+  },
+  {
+    "id": 381,
+    "categoria": "oggetti impossibili",
+    "tema": "Il vetro opaco trasparente"
+  },
+  {
+    "id": 382,
+    "categoria": "emozioni astratte",
+    "tema": "Il conforto ruvido di un maglione di lana"
+  },
+  {
+    "id": 383,
+    "categoria": "burocrazia surreale",
+    "tema": "Archivio delle email non risposte"
+  },
+  {
+    "id": 384,
+    "categoria": "gastronomia improbabile",
+    "tema": "Biscotti che parlano sottovoce"
+  },
+  {
+    "id": 385,
+    "categoria": "creature assurde",
+    "tema": "Il camaleonte indeciso sul colore"
+  },
+  {
+    "id": 386,
+    "categoria": "concetti filosofici",
+    "tema": "Il caos deterministico di una trottola"
+  },
+  {
+    "id": 387,
+    "categoria": "nostalgia retrò",
+    "tema": "La radiolina a transistor del nonno"
+  },
+  {
+    "id": 388,
+    "categoria": "onirico surreale",
+    "tema": "La scarpa persa nella fuga onirica"
+  },
+  {
+    "id": 389,
+    "categoria": "tecnologia distopica",
+    "tema": "Tablet retrofuturista a vapore"
+  },
+  {
+    "id": 390,
+    "categoria": "rituali quotidiani",
+    "tema": "L'arte di centrare il cestino accartocciando"
+  },
+  {
+    "id": 391,
+    "categoria": "oggetti impossibili",
+    "tema": "Una chiave senza serratura possibile"
+  },
+  {
+    "id": 392,
+    "categoria": "emozioni astratte",
+    "tema": "La curiosità nervosa di un gatto fermo"
+  },
+  {
+    "id": 393,
+    "categoria": "burocrazia surreale",
+    "tema": "Cartellino che timbra l'esistenza"
+  },
+  {
+    "id": 394,
+    "categoria": "gastronomia improbabile",
+    "tema": "Sciroppo di risate trattenute"
+  },
+  {
+    "id": 395,
+    "categoria": "creature assurde",
+    "tema": "Ornitorinco in crisi d'identità"
+  },
+  {
+    "id": 396,
+    "categoria": "concetti filosofici",
+    "tema": "L'essere e il nulla in barattolo"
+  },
+  {
+    "id": 397,
+    "categoria": "nostalgia retrò",
+    "tema": "Il flipper del bar di paese"
+  },
+  {
+    "id": 398,
+    "categoria": "onirico surreale",
+    "tema": "Il fiume di sabbia luminosa"
+  },
+  {
+    "id": 399,
+    "categoria": "tecnologia distopica",
+    "tema": "Joystick per controllare il destino altrui"
+  },
+  {
+    "id": 400,
+    "categoria": "rituali quotidiani",
+    "tema": "Il culto del telefono all'1% di batteria"
+  },
+  {
+    "id": 401,
+    "categoria": "oggetti impossibili",
+    "tema": "Lo zero diviso per se stesso"
+  },
+  {
+    "id": 402,
+    "categoria": "emozioni astratte",
+    "tema": "L'attesa dolce della cioccolata calda"
+  },
+  {
+    "id": 403,
+    "categoria": "burocrazia surreale",
+    "tema": "Raccoglitore ad anelli del caos"
+  },
+  {
+    "id": 404,
+    "categoria": "gastronomia improbabile",
+    "tema": "Formaggio stagionato nei pensieri"
+  },
+  {
+    "id": 405,
+    "categoria": "creature assurde",
+    "tema": "Il narvalo spadaccino del Polo Nord"
+  },
+  {
+    "id": 406,
+    "categoria": "concetti filosofici",
+    "tema": "La quinta dimensione ripiegata"
+  },
+  {
+    "id": 407,
+    "categoria": "nostalgia retrò",
+    "tema": "Il Subbuteo dal panno verde"
+  },
+  {
+    "id": 408,
+    "categoria": "onirico surreale",
+    "tema": "L'ombra che cammina da sola"
+  },
+  {
+    "id": 409,
+    "categoria": "tecnologia distopica",
+    "tema": "Sveglia solare alimentata a procrastinazione"
+  },
+  {
+    "id": 410,
+    "categoria": "rituali quotidiani",
+    "tema": "Cerimoniale del riavvolgere il cavo"
+  },
+  {
+    "id": 411,
+    "categoria": "oggetti impossibili",
+    "tema": "Un treno che insegue la sua coda"
+  },
+  {
+    "id": 412,
+    "categoria": "emozioni astratte",
+    "tema": "Il silenzio pieno di una stanza vuota"
+  },
+  {
+    "id": 413,
+    "categoria": "burocrazia surreale",
+    "tema": "Nota a piè di pagina della vita"
+  },
+  {
+    "id": 414,
+    "categoria": "gastronomia improbabile",
+    "tema": "Torta a strati di stagioni"
+  },
+  {
+    "id": 415,
+    "categoria": "creature assurde",
+    "tema": "Talpa con vista da aquila"
+  },
+  {
+    "id": 416,
+    "categoria": "concetti filosofici",
+    "tema": "Il principio antropico di un cuscino"
+  },
+  {
+    "id": 417,
+    "categoria": "nostalgia retrò",
+    "tema": "Il fischietto dentro la patatina"
+  },
+  {
+    "id": 418,
+    "categoria": "onirico surreale",
+    "tema": "La lettera mai aperta dell'incubo"
+  },
+  {
+    "id": 419,
+    "categoria": "tecnologia distopica",
+    "tema": "Mouse ergonomico per dita robotiche"
+  },
+  {
+    "id": 420,
+    "categoria": "rituali quotidiani",
+    "tema": "La via del grissino che si sbriciola"
+  },
+  {
+    "id": 421,
+    "categoria": "oggetti impossibili",
+    "tema": "La frazione che non si chiude"
+  },
+  {
+    "id": 422,
+    "categoria": "emozioni astratte",
+    "tema": "La gioia sospesa di un'altalena ferma"
+  },
+  {
+    "id": 423,
+    "categoria": "burocrazia surreale",
+    "tema": "Forbici per tagliare i nastri immaginari"
+  },
+  {
+    "id": 424,
+    "categoria": "gastronomia improbabile",
+    "tema": "Pop-corn esplosi di entusiasmo"
+  },
+  {
+    "id": 425,
+    "categoria": "creature assurde",
+    "tema": "Il fenicottero che odia il rosa"
+  },
+  {
+    "id": 426,
+    "categoria": "concetti filosofici",
+    "tema": "La velocità della luce in pantofole"
+  },
+  {
+    "id": 427,
+    "categoria": "nostalgia retrò",
+    "tema": "La playlist su musicassetta registrata dalla radio"
+  },
+  {
+    "id": 428,
+    "categoria": "onirico surreale",
+    "tema": "Il soffitto pieno di stelle finte"
+  },
+  {
+    "id": 429,
+    "categoria": "tecnologia distopica",
+    "tema": "Casco neurale per pensare di meno"
+  },
+  {
+    "id": 430,
+    "categoria": "rituali quotidiani",
+    "tema": "Liturgia del calzino risucchiato dalla lavatrice"
+  },
+  {
+    "id": 431,
+    "categoria": "oggetti impossibili",
+    "tema": "Un metro più lungo di un metro"
+  },
+  {
+    "id": 432,
+    "categoria": "emozioni astratte",
+    "tema": "La nostalgia salata del mare d'inverno"
+  },
+  {
+    "id": 433,
+    "categoria": "burocrazia surreale",
+    "tema": "Bacheca degli avvisi ignorati"
+  },
+  {
+    "id": 434,
+    "categoria": "gastronomia improbabile",
+    "tema": "Gnocchi modellati dalla noia"
+  },
+  {
+    "id": 435,
+    "categoria": "creature assurde",
+    "tema": "Castoro architetto senza licenza"
+  },
+  {
+    "id": 436,
+    "categoria": "concetti filosofici",
+    "tema": "L'eterno ritorno di un calzino"
+  },
+  {
+    "id": 437,
+    "categoria": "nostalgia retrò",
+    "tema": "Il dischetto di Aladdin"
+  },
+  {
+    "id": 438,
+    "categoria": "onirico surreale",
+    "tema": "Il vento prigioniero in una bottiglia"
+  },
+  {
+    "id": 439,
+    "categoria": "tecnologia distopica",
+    "tema": "Tessera fedeltà del nichilismo digitale"
+  },
+  {
+    "id": 440,
+    "categoria": "rituali quotidiani",
+    "tema": "L'arte di rimboccarsi le maniche bagnate"
+  },
+  {
+    "id": 441,
+    "categoria": "oggetti impossibili",
+    "tema": "Il fulmine congelato a mezz'aria"
+  },
+  {
+    "id": 442,
+    "categoria": "emozioni astratte",
+    "tema": "L'entusiasmo confuso di una bussola rotta"
+  },
+  {
+    "id": 443,
+    "categoria": "burocrazia surreale",
+    "tema": "Modulo 740 per la felicità"
+  },
+  {
+    "id": 444,
+    "categoria": "gastronomia improbabile",
+    "tema": "Limonata di estati infinite"
+  },
+  {
+    "id": 445,
+    "categoria": "creature assurde",
+    "tema": "Il calabrone ballerino confuso"
+  },
+  {
+    "id": 446,
+    "categoria": "concetti filosofici",
+    "tema": "La massa critica di un abbraccio"
+  },
+  {
+    "id": 447,
+    "categoria": "nostalgia retrò",
+    "tema": "Lo yo-yo che torna su da solo"
+  },
+  {
+    "id": 448,
+    "categoria": "onirico surreale",
+    "tema": "La giostra che gira nel vuoto"
+  },
+  {
+    "id": 449,
+    "categoria": "tecnologia distopica",
+    "tema": "Robot aspirapolvere con sindrome dell'impostore"
+  },
+  {
+    "id": 450,
+    "categoria": "rituali quotidiani",
+    "tema": "Il rito dell'ultimo quadretto di cioccolato"
+  },
+  {
+    "id": 451,
+    "categoria": "oggetti impossibili",
+    "tema": "Una ruota perfettamente quadrata"
+  },
+  {
+    "id": 452,
+    "categoria": "emozioni astratte",
+    "tema": "La pace ostinata di un cuscino morbido"
+  },
+  {
+    "id": 453,
+    "categoria": "burocrazia surreale",
+    "tema": "Pinzatrice dell'inevitabile"
+  },
+  {
+    "id": 454,
+    "categoria": "gastronomia improbabile",
+    "tema": "Cioccolatini ripieni di coraggio"
+  },
+  {
+    "id": 455,
+    "categoria": "creature assurde",
+    "tema": "Procione tesoriere del condominio"
+  },
+  {
+    "id": 456,
+    "categoria": "concetti filosofici",
+    "tema": "Il teorema di incompletezza in cornice"
+  },
+  {
+    "id": 457,
+    "categoria": "nostalgia retrò",
+    "tema": "Il profumo della colla Coccoina"
+  },
+  {
+    "id": 458,
+    "categoria": "onirico surreale",
+    "tema": "Il pozzo dei desideri capovolti"
+  },
+  {
+    "id": 459,
+    "categoria": "tecnologia distopica",
+    "tema": "Termoscanner per misurare la simpatia"
+  },
+  {
+    "id": 460,
+    "categoria": "rituali quotidiani",
+    "tema": "Filosofia della molletta che salta via"
+  },
+  {
+    "id": 461,
+    "categoria": "oggetti impossibili",
+    "tema": "Il cassetto pieno di vuoto"
+  },
+  {
+    "id": 462,
+    "categoria": "emozioni astratte",
+    "tema": "Il tepore malinconico di una coperta vecchia"
+  },
+  {
+    "id": 463,
+    "categoria": "burocrazia surreale",
+    "tema": "La sedia girevole dell'indecisione"
+  },
+  {
+    "id": 464,
+    "categoria": "gastronomia improbabile",
+    "tema": "Pane raffermo dei lunedì"
+  },
+  {
+    "id": 465,
+    "categoria": "creature assurde",
+    "tema": "Il koala caffeinomane insonne"
+  },
+  {
+    "id": 466,
+    "categoria": "concetti filosofici",
+    "tema": "La materia prima alchemica in vaso"
+  },
+  {
+    "id": 467,
+    "categoria": "nostalgia retrò",
+    "tema": "La macchina da scrivere a nastro"
+  },
+  {
+    "id": 468,
+    "categoria": "onirico surreale",
+    "tema": "La maschera dimenticata sul comodino"
+  },
+  {
+    "id": 469,
+    "categoria": "tecnologia distopica",
+    "tema": "Lampadina a luce di domeniche piovose"
+  },
+  {
+    "id": 470,
+    "categoria": "rituali quotidiani",
+    "tema": "L'epica del sapone sgusciante in doccia"
+  },
+  {
+    "id": 471,
+    "categoria": "oggetti impossibili",
+    "tema": "Una piastrella che non si ripete mai"
+  },
+  {
+    "id": 472,
+    "categoria": "emozioni astratte",
+    "tema": "La tenerezza goffa di un peluche slabbrato"
+  },
+  {
+    "id": 473,
+    "categoria": "burocrazia surreale",
+    "tema": "Promemoria per ricordarsi di respirare"
+  },
+  {
+    "id": 474,
+    "categoria": "gastronomia improbabile",
+    "tema": "Mousse leggera come una bugia"
+  },
+  {
+    "id": 475,
+    "categoria": "creature assurde",
+    "tema": "Lombrico esploratore di profondità"
+  },
+  {
+    "id": 476,
+    "categoria": "concetti filosofici",
+    "tema": "Il continuum spazio-tempo a maglia"
+  },
+  {
+    "id": 477,
+    "categoria": "nostalgia retrò",
+    "tema": "Il pallone Super Tele sgonfio"
+  },
+  {
+    "id": 478,
+    "categoria": "onirico surreale",
+    "tema": "Il sole nero del mezzogiorno onirico"
+  },
+  {
+    "id": 479,
+    "categoria": "tecnologia distopica",
+    "tema": "Sensore di presenza per fantasmi del passato"
+  },
+  {
+    "id": 480,
+    "categoria": "rituali quotidiani",
+    "tema": "Il culto della crosta del pane abbandonata"
+  },
+  {
+    "id": 481,
+    "categoria": "oggetti impossibili",
+    "tema": "Il poliedro dalle facce infinite"
+  },
+  {
+    "id": 482,
+    "categoria": "emozioni astratte",
+    "tema": "L'orgoglio segreto di un quaderno pieno"
+  },
+  {
+    "id": 483,
+    "categoria": "burocrazia surreale",
+    "tema": "Ufficio del personale degli spettri"
+  },
+  {
+    "id": 484,
+    "categoria": "gastronomia improbabile",
+    "tema": "Tisana di sonni profondi"
+  },
+  {
+    "id": 485,
+    "categoria": "creature assurde",
+    "tema": "Il pavone timido e riservato"
+  },
+  {
+    "id": 486,
+    "categoria": "concetti filosofici",
+    "tema": "L'apeiron di Anassimandro in scatola"
+  },
+  {
+    "id": 487,
+    "categoria": "nostalgia retrò",
+    "tema": "Il Pog vinto a scuola"
+  },
+  {
+    "id": 488,
+    "categoria": "onirico surreale",
+    "tema": "La collezione di risvegli improvvisi"
+  },
+  {
+    "id": 489,
+    "categoria": "tecnologia distopica",
+    "tema": "Toaster vintage con connessione satellitare"
+  },
+  {
+    "id": 490,
+    "categoria": "rituali quotidiani",
+    "tema": "Cerimonia dell'allineare le scarpe all'ingresso"
+  },
+  {
+    "id": 491,
+    "categoria": "oggetti impossibili",
+    "tema": "Una matrioska che contiene la più grande"
+  },
+  {
+    "id": 492,
+    "categoria": "emozioni astratte",
+    "tema": "La nostalgia profumata della pioggia sull'asfalto"
+  },
+  {
+    "id": 493,
+    "categoria": "burocrazia surreale",
+    "tema": "Stampante che ingoia i fogli buoni"
+  },
+  {
+    "id": 494,
+    "categoria": "gastronomia improbabile",
+    "tema": "Crostata di promesse mantenute"
+  },
+  {
+    "id": 495,
+    "categoria": "creature assurde",
+    "tema": "Cinghiale collezionista di tartufi finti"
+  },
+  {
+    "id": 496,
+    "categoria": "concetti filosofici",
+    "tema": "La pulsione di morte di una pila"
+  },
+  {
+    "id": 497,
+    "categoria": "nostalgia retrò",
+    "tema": "La sigla dei cartoni del pomeriggio"
+  },
+  {
+    "id": 498,
+    "categoria": "onirico surreale",
+    "tema": "Il guanto che stringe il nulla"
+  },
+  {
+    "id": 499,
+    "categoria": "tecnologia distopica",
+    "tema": "Distributore di compleanni in scatola"
+  },
+  {
+    "id": 500,
+    "categoria": "rituali quotidiani",
+    "tema": "L'arte di pescare la mollica nel tostapane"
+  }
+]
